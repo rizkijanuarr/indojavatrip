@@ -1,0 +1,786 @@
+.package-detail-section {
+    padding: 150px 0 60px 0;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.navbar-background-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 108px;
+    background-color: #1a1a1a;
+    z-index: 998;
+    pointer-events: none;
+}
+
+.package-detail-content {
+    margin-top: 60px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+/* Back Button */
+.back-button-container {
+    margin-bottom: 30px;
+}
+
+.back-button {
+    background: none;
+    border: 1px solid #e5e7eb;
+        .info-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .note-item {
+        padding: 10px 0;
+        gap: 12px;
+    }
+
+    .note-icon {
+        font-size: 20px;
+        min-width: 35px;
+        height: 35px;
+    }
+
+    .note-text h5 {
+        font-size: 13px;
+    }
+
+    .meeting-details {
+        gap: 6px;
+    }
+
+    .meeting-item {
+        font-size: 13px;
+    }
+}
+
+.back-button {
+    padding: 10px 20px;
+    border: 1px solid #e5e7eb;
+    background-color: white;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #6b7280;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.back-button:hover {
+    background-color: #f9fafb;
+    border-color: #d1d5db;
+    color: #374151;
+}
+
+/* Package Not Found */
+.package-not-found {
+    text-align: center;
+    padding: 60px 20px;
+    color: #6b7280;
+}
+
+.package-not-found h2 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    color: #1a1a1a;
+}
+
+.package-not-found p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* Package Detail Grid */
+.package-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+/* Images Section */
+.package-images-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    will-change: transform;
+    transition: transform 0.100s ease-out;
+}
+
+.main-image-container {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    height: 400px;
+}
+
+.main-image {
+    width: 100%;
+    height: 100%; /* Kembali ke normal karena parallax di container parent */
+    object-fit: cover;
+}
+
+.package-badge {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: linear-gradient(135deg, #ff6600, #ff8533);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20 0 20 0;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(255, 102, 0, 0.3);
+}
+
+/* Thumbnail Images */
+.thumbnail-images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.thumbnail {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.thumbnail:hover {
+    border-color: #f97316;
+    transform: scale(1.05);
+}
+
+.thumbnail.active {
+    border-color: #f97316;
+    box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.2);
+}
+
+/* Package Info Section */
+.package-info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Package Header */
+.package-header {
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 24px;
+}
+
+.package-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.star {
+    color: #ffa500;
+    font-size: 1.4rem;
+    margin-right: 8px;
+}
+
+.rating-text {
+    font-size: 0.95rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.package-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 16px 0;
+    line-height: 1.2;
+}
+
+.package-description {
+    font-size: 1.1rem;
+    color: #6b7280;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Package Details */
+.package-details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: #f9fafb;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: #374151;
+    font-size: 1rem;
+}
+
+.detail-value {
+    font-weight: 500;
+    color: #1a1a1a;
+    font-size: 1rem;
+}
+
+.detail-value.price {
+    color: #f97316;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.detail-value.duration {
+    background: linear-gradient(135deg, #f97316, #ff8533);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(249, 115, 22, 0.3);
+}
+
+/* Package Highlights */
+.package-highlights h3,
+.package-itinerary h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 20px 0;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.highlight-item:hover {
+    background-color: #f3f4f6;
+    border-color: #d1d5db;
+}
+
+.highlight-icon {
+    font-size: 1rem;
+    flex-shrink: 0;
+    color: #10b981;
+    font-weight: bold;
+}
+
+.highlight-text {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #374151;
+    line-height: 1.3;
+}
+
+/* Itinerary */
+.itinerary-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.itinerary-item {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.itinerary-day {
+    background: linear-gradient(135deg, #f97316, #ff8533);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.itinerary-day:hover {
+    background: linear-gradient(135deg, #ea580c, #f97316);
+}
+
+.day-number {
+    font-weight: 700;
+    color: white;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+.day-title {
+    font-weight: 600;
+    color: white;
+    font-size: 1.1rem;
+    flex: 1;
+    margin-left: 16px;
+}
+
+.arrow-icon {
+    font-size: 1.2rem;
+    color: white;
+    transition: transform 0.3s ease;
+    font-weight: bold;
+}
+
+.arrow-icon.expanded {
+    transform: rotate(180deg);
+}
+
+.itinerary-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 20px;
+}
+
+.itinerary-content.expanded {
+    max-height: 1000px;
+    padding: 20px;
+}
+
+.itinerary-activities {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.activity-item {
+    background-color: #f9fafb;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border-left: 3px solid #f97316;
+    color: #4b5563;
+    line-height: 1.5;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.activity-item:hover {
+    background-color: #f3f4f6;
+    border-left-color: #ea580c;
+    transform: translateX(2px);
+}
+
+.itinerary-content p {
+    margin: 0;
+    color: #6b7280;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+/* What's Included/Excluded */
+.package-includes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.includes-section h4,
+.excludes-section h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 16px 0;
+    color: #1a1a1a;
+}
+
+.includes-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.include-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+}
+
+.include-item.included {
+    background-color: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.include-item.excluded {
+    background-color: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.include-item.included .include-icon {
+    color: #10b981;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.include-item.excluded .include-icon {
+    color: #ef4444;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.include-item.included .include-text {
+    color: #065f46;
+    font-weight: 500;
+}
+
+.include-item.excluded .include-text {
+    color: #991b1b;
+    font-weight: 500;
+}
+
+/* No Data State */
+.no-data {
+    color: #9ca3af;
+    font-style: italic;
+    text-align: center;
+    padding: 20px;
+    grid-column: 1 / -1;
+}
+
+/* Booking Section */
+.booking-section {
+    background-color: #f9fafb;
+    padding: 30px;
+    border-radius: 16px;
+    border: 2px solid #e5e7eb;
+    text-align: center;
+}
+
+.price-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.total-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.total-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f97316;
+}
+
+.book-now-button {
+    width: 100%;
+    padding: 16px 24px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.booking-note {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin: 0;
+    font-style: italic;
+}
+
+/* Additional Information */
+.additional-info {
+    margin-top: 30px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.info-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-card h4 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Important Notes Styling */
+.important-notes-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.note-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 0;
+}
+
+.note-icon {
+    font-size: 24px;
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f97316 0%, #f5576c 100%);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(240, 147, 251, 0.3);
+}
+
+.note-text h5 {
+    margin: 0;
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Meeting Point Styling */
+.meeting-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.meeting-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.meeting-item {
+    color: #666;
+    font-size: 14px;
+}
+
+.meeting-item strong {
+    color: #333;
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (min-width: 300px) and (max-width: 900px) {
+    .package-images-section {
+        transform: none !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    .package-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .package-includes {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .highlights-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .package-detail-content {
+        padding: 0 15px;
+    }
+    
+    .package-detail-grid {
+        gap: 30px;
+    }
+    
+    .package-title {
+        font-size: 1.8rem;
+    }
+    
+    .main-image {
+        height: 250px;
+    }
+    
+    .thumbnail-images {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .thumbnail {
+        height: 60px;
+    }
+    
+    .highlights-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .highlight-item {
+        padding: 10px 12px;
+    }
+    
+    .itinerary-item {
+        margin-bottom: 12px;
+    }
+    
+    .itinerary-day {
+        padding: 12px 16px;
+    }
+    
+    .day-number {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+    }
+    
+    .day-title {
+        font-size: 1rem;
+        margin-left: 12px;
+    }
+    
+    .arrow-icon {
+        font-size: 1.1rem;
+    }
+    
+    .itinerary-content.expanded {
+        padding: 16px;
+    }
+    
+    .activity-item {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+    }
+
+    .price-summary {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .package-detail-section {
+        padding: 130px 0 40px 0;
+    }
+    
+    .package-detail-content {
+        margin-top: 40px;
+    }
+    
+    .package-title {
+        font-size: 1.5rem;
+    }
+    
+    .thumbnail-images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .highlights-grid {
+        gap: 8px;
+    }
+    
+    .highlight-item {
+        padding: 8px 10px;
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+    
+    .highlight-text {
+        font-size: 0.8rem;
+    }
+    
+    .package-includes {
+        gap: 15px;
+    }
+    
+    .booking-section {
+        padding: 20px;
+    }
+    
+    .info-card {
+        padding: 20px;
+    }
+    
+    .itinerary-day {
+        padding: 10px 12px;
+    }
+    
+    .day-number {
+        font-size: 0.75rem;
+        padding: 3px 6px;
+    }
+    
+    .day-title {
+        font-size: 0.9rem;
+        margin-left: 10px;
+    }
+    
+    .arrow-icon {
+        font-size: 1rem;
+    }
+    
+    .itinerary-content.expanded {
+        padding: 14px;
+    }
+    
+    .activity-item {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+}

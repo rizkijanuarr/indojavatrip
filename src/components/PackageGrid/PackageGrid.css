@@ -1,0 +1,49 @@
+/* Packages Grid */
+.packages-grid {
+    display: grid;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Grid Columns */
+.packages-grid--1 {
+    grid-template-columns: 1fr;
+}
+
+.packages-grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.packages-grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.packages-grid--4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .packages-grid--4 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .packages-grid--3,
+    .packages-grid--4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .packages-grid {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .packages-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px;
+    }
+}

@@ -1,0 +1,118 @@
+/* Base Button Styles */
+.my-button {
+  width: 100%;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  outline: none;
+}
+
+.my-button span {
+  position: relative;
+  z-index: 2;
+}
+
+/* Primary Variant - Simple color change */
+.my-button--primary {
+  background: #1a1a1a;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.my-button--primary:hover {
+  background: var(--button-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);
+}
+
+/* Secondary Variant - Transparent with color text */
+.my-button--secondary {
+  background: transparent;
+  color: var(--button-color);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.my-button--secondary:hover {
+  background: var(--button-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Outline Variant - Stroke only */
+.my-button--outline {
+  background: transparent;
+  color: var(--button-color);
+  border: 2px solid var(--button-color);
+  transition: all 0.3s ease;
+}
+
+.my-button--outline:hover {
+  background: var(--button-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Ghost Variant - Minimal style */
+.my-button--ghost {
+  background: transparent;
+  color: var(--button-color);
+  border: none;
+  padding: 8px 16px;
+}
+
+.my-button--ghost:hover {
+  background: rgba(255, 102, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Solid Variant - Full color background */
+.my-button--solid {
+  background: var(--button-color);
+  color: white;
+}
+
+.my-button--solid:hover {
+  background: var(--button-color);
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Size Variants */
+.my-button--small {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  border-radius: 20px;
+}
+
+.my-button--large {
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+}
+
+/* Disabled State */
+.my-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.my-button:disabled:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}

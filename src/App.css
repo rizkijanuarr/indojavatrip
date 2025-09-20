@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", sans-serif;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Performance optimizations */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* App layout */
+.app-root-fullscreen {
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+}
+
+.navbarWrapper {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  background: transparent !important;
+}
+
+/* FORCE NAVBAR AREA TO BE TRANSPARENT */
+.w-full.absolute.top-0.left-0 {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Remove any possible navbar background */
+nav, .nav-container {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Selection styles */
+::selection {
+  background-color: #ff6600;
+  color: #fff;
+}
+
+::-moz-selection {
+  background-color: #ff6600;
+  color: #fff;
+}
+
+/* Loading skeleton */
+.loading-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Grid overlay for development */
+.grid-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.1;
+  display: none;
+}
+
+.grid-overlay.show {
+  display: block;
+}
+
+.grid-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.grid-column {
+  background: #ff0000;
+  height: 100%;
+  border: 1px solid #ff0000;
+}
+
+.grid-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 99999;
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.grid-toggle:hover {
+  background: #555;
+}

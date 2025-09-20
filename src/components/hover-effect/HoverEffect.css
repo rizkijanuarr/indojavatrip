@@ -1,0 +1,20 @@
+.hover-effect {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.hover-effect::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ff6600;
+  transition: width 300ms ease-in-out 300ms;
+}
+
+.hover-effect:hover::after {
+  width: 100%;
+}

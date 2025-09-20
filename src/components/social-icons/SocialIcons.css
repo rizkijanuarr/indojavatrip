@@ -1,0 +1,21 @@
+.container-social-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  color: white;
+}
+
+.social-icons-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 20px;
+}
+
+.verticleText {
+  writing-mode: vertical-lr;
+  display: inline-block;
+  rotate: 180deg;
+  font-size: 12px;
+}

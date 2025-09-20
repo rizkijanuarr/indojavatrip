@@ -1,0 +1,147 @@
+/* Tour Card Base */
+.tour-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.tour-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Tour Card Layouts */
+.tour-card--landscape {
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+}
+
+.tour-card--portrait {
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+}
+
+/* Image Container */
+.tour-card__image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.tour-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.tour-card__image::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: #ff6600;
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.tour-card:hover .tour-card__image img {
+    transform: scale(1.05);
+}
+
+.tour-card:hover .tour-card__image::after {
+    width: 280%;
+    height: 280%;
+    opacity: 0.3;
+}
+
+/* Overlay */
+.tour-card__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+            rgba(0, 0, 0, 0.6) 0%,
+            rgba(0, 0, 0, 0.3) 50%,
+            rgba(0, 0, 0, 0.7) 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: 30px;
+    transition: background 0.3s ease;
+}
+
+.tour-card:hover .tour-card__overlay {
+    background: linear-gradient(135deg,
+            rgba(0, 0, 0, 0.7) 0%,
+            rgba(0, 0, 0, 0.4) 50%,
+            rgba(0, 0, 0, 0.8) 100%);
+}
+
+/* Content */
+.tour-card__content {
+    width: 100%;
+}
+
+.tour-card__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.2;
+}
+
+/* Button Styling - Using MyButton component */
+.tour-card__button {
+    width: auto !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tour-card__overlay {
+        padding: 20px;
+    }
+
+    .tour-card__title {
+        font-size: 2rem;
+    }
+
+    .tour-card--landscape {
+        min-height: 250px;
+    }
+
+    .tour-card--portrait {
+        min-height: 320px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tour-card__title {
+        font-size: 1.8rem;
+    }
+
+    .tour-card__overlay {
+        padding: 16px;
+    }
+
+    .tour-card--landscape {
+        min-height: 200px;
+    }
+
+    .tour-card--portrait {
+        min-height: 280px;
+    }
+}

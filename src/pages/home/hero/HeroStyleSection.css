@@ -1,0 +1,405 @@
+/* Base Container */
+.container-slider {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.video-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: transparent;
+}
+
+.video-iframe {
+  width: 100vw;
+  height: 56.25vw; /* 16:9 aspect ratio */
+  min-height: 100vh;
+  min-width: 177.78vh; /* 16:9 aspect ratio */
+  object-fit: cover;
+  border: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text-section {
+  position: absolute;
+  left: 4vw;
+  bottom: 8vh;
+  display: flex;
+  align-items: center;
+  gap: 1.5vw;
+  z-index: 20;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 40vw;
+}
+
+.controls-section {
+  position: absolute;
+  right: 4vw;
+  bottom: 6vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1.5vh;
+  z-index: 100;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Scroll Down Indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+/* Circular Text */
+.circular-text {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: rotateClockwise 12s linear infinite;
+}
+
+.letter {
+  position: absolute;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  /* opacity: 0.5; */
+  transform-origin: 60px 60px;
+  transform: rotate(calc(var(--i) * 30deg)) translate(40px) rotate(calc(var(--i) * -30deg));
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.scroll-icon {
+  position: absolute;
+  width: 32px;
+  height: 50px;
+  border: 2px solid white;
+  /* opacity: 0.5; */
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 8px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.scroll-dot {
+  width: 4px;
+  height: 4px;
+  background-color: white;
+  border-radius: 50%;
+  /* opacity: 0.5; */
+  animation: scrollDot 6s infinite;
+}
+
+/* Animations */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+@keyframes scrollDot {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(15px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateClockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+
+/* Mobile kecil (≤ 480px) */
+@media (max-width: 480px) {
+  .video-iframe {
+    width: 100vw;
+    height: 177.78vw; /* 9:16 aspect ratio untuk mobile */
+    min-height: 100vh;
+    min-width: 56.25vh;
+  }
+
+  .text-section {
+    display: none;
+  }
+
+  .controls-section {
+    display: none;
+  }
+
+  .scroll-indicator {
+    bottom: -20px;
+    transform: translateX(-50%) scale(0.7);
+  }
+
+  .circular-text {
+    width: 100px;
+    height: 100px;
+  }
+
+  .letter {
+    font-size: 8px;
+    transform-origin: 40px 40px;
+    transform: rotate(calc(var(--i) * 30deg)) translate(25px) rotate(calc(var(--i) * -30deg));
+  }
+
+  .scroll-icon {
+    width: 20px;
+    height: 35px;
+    padding-top: 5px;
+  }
+
+  .scroll-dot {
+    width: 2px;
+    height: 2px;
+  }
+}
+
+/* Mobile sedang (481px - 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .video-iframe {
+    width: 100vw;
+    height: 133.33vw; /* Adjusted for better mobile viewing */
+    min-height: 100vh;
+    min-width: 75vh;
+  }
+
+  .text-section {
+    display: none;
+  }
+
+  .controls-section {
+    display: none;
+  }
+
+  .scroll-indicator {
+    bottom: -20px;
+    transform: translateX(-50%) scale(0.8);
+  }
+
+  .circular-text {
+    width: 120px;
+    height: 120px;
+  }
+
+  .letter {
+    font-size: 9px;
+    transform-origin: 48px 48px;
+    transform: rotate(calc(var(--i) * 30deg)) translate(30px) rotate(calc(var(--i) * -30deg));
+  }
+
+  .scroll-icon {
+    width: 24px;
+    height: 40px;
+    padding-top: 6px;
+  }
+}
+
+/* Tablet (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .video-iframe {
+    width: 100vw;
+    height: 75vw; /* Better aspect ratio for tablet */
+    min-height: 100vh;
+    min-width: 133.33vh;
+  }
+
+  .text-section {
+    display: none;
+  }
+
+  .controls-section {
+    display: none;
+  }
+
+  .scroll-indicator {
+    bottom: -20px;
+    transform: translateX(-50%) scale(0.9);
+  }
+
+  .circular-text {
+    width: 140px;
+    height: 140px;
+  }
+
+  .letter {
+    font-size: 10px;
+    transform-origin: 56px 56px;
+    transform: rotate(calc(var(--i) * 30deg)) translate(35px) rotate(calc(var(--i) * -30deg));
+  }
+
+  .scroll-icon {
+    width: 28px;
+    height: 45px;
+    padding-top: 7px;
+  }
+}
+
+/* Laptop standar (1024px - 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .video-iframe {
+    width: 100vw;
+    height: 56.25vw;
+    min-height: 100vh;
+    min-width: 177.78vh;
+  }
+
+  .text-section {
+    left: 4vw;
+    bottom: 8vh;
+    gap: 1.5vw;
+    padding: 1rem;
+    max-width: 40vw;
+  }
+
+  .controls-section {
+    right: 4vw;
+    bottom: 6vh;
+    gap: 1.5vh;
+    padding: 1rem;
+  }
+
+  .scroll-indicator {
+    bottom: -20px;
+    transform: translateX(-50%) scale(0.95);
+  }
+}
+
+/* Desktop besar (≥ 1280px) */
+@media (min-width: 1280px) {
+  .video-iframe {
+    width: 100vw;
+    height: 56.25vw;
+    min-height: 100vh;
+    min-width: 177.78vh;
+  }
+
+  .text-section {
+    left: 4vw;
+    bottom: 8vh;
+    gap: 1.5vw;
+    padding: 1rem;
+    max-width: 40vw;
+  }
+
+  .controls-section {
+    right: 4vw;
+    bottom: 6vh;
+    gap: 1.5vh;
+    padding: 1rem;
+  }
+
+  .scroll-indicator {
+    bottom: -20px;
+  }
+
+  .circular-text {
+    width: 160px;
+    height: 160px;
+  }
+
+  .letter {
+    font-size: 12px;
+    transform-origin: 64px 64px;
+    transform: rotate(calc(var(--i) * 30deg)) translate(40px) rotate(calc(var(--i) * -30deg));
+  }
+
+  .scroll-icon {
+    width: 32px;
+    height: 50px;
+    padding-top: 8px;
+  }
+
+  .scroll-dot {
+    width: 4px;
+    height: 4px;
+  }
+}
+
+/* Landscape orientation untuk mobile */
+@media (max-width: 767px) and (orientation: landscape) {
+  .container-slider {
+    height: 100vh;
+  }
+
+  .text-section {
+    left: 20px;
+    bottom: 40px;
+  }
+
+  .controls-section {
+    right: 20px;
+    bottom: 30px;
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .controls-section {
+    gap: 20px;
+  }
+  
+  .text-section {
+    padding: 16px;
+    border-radius: 12px;
+  }
+  
+  .controls-section {
+    padding: 16px;
+    border-radius: 12px;
+  }
+}
+

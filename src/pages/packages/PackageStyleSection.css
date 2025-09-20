@@ -1,0 +1,446 @@
+.packages-section {
+    padding: 150px 0 60px 0;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.navbar-background-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background-color: #1a1a1a;
+    z-index: 998;
+    pointer-events: none;
+}
+
+.packages-content {
+    margin-top: 60px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Filter and Search Section */
+.filter-search-section {
+    display: flex;
+    margin-bottom: 20px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: visible;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Filter Dropdown */
+.filter-dropdown {
+    position: relative;
+    z-index: 100;
+}
+
+.filter-button {
+    background-color: #e5e7eb;
+    border: none;
+    border-right: 1px solid #d1d5db;
+    padding: 12px 20px;
+    border-radius: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #6b7280;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 120px;
+    transition: all 0.2s ease;
+    height: 48px;
+}
+
+.filter-button:hover {
+    background-color: #d1d5db;
+}
+
+.filter-arrow {
+    transition: transform 0.2s ease;
+    font-size: 10px;
+    margin-left: auto;
+}
+
+.filter-arrow.open {
+    transform: rotate(180deg);
+}
+
+/* Advanced Filter Options */
+.filter-options-advanced {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 300px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    margin-top: 4px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border-bottom: 1px solid #e5e7eb;
+    font-weight: 600;
+    font-size: 14px;
+    color: #374151;
+}
+
+.clear-filters {
+    background: none;
+    border: none;
+    color: #f97316;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.clear-filters:hover {
+    text-decoration: underline;
+}
+
+.filter-category {
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.filter-category:last-child {
+    border-bottom: none;
+}
+
+.filter-category-title {
+    padding: 12px 16px 8px 16px;
+    font-weight: 600;
+    font-size: 13px;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filter-category-options {
+    padding: 0 16px 12px 16px;
+}
+
+.filter-checkbox-label {
+    display: flex;
+    align-items: center;
+    padding: 6px 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border-radius: 4px;
+    margin: 0 -8px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.filter-checkbox-label:hover {
+    background-color: #f9fafb;
+}
+
+.filter-checkbox {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    accent-color: #f97316;
+}
+
+.filter-checkbox-text {
+    font-size: 14px;
+    color: #374151;
+}
+
+/* Special styling for badge options */
+.filter-category:last-child .filter-checkbox-label {
+    position: relative;
+}
+
+.filter-category:last-child .filter-checkbox-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.filter-category:last-child .filter-checkbox-text::after {
+    content: '';
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filter-category:last-child .filter-checkbox-label:nth-child(1) .filter-checkbox-text::after {
+    content: 'NEW';
+    background-color: #10b981;
+    color: white;
+}
+
+.filter-category:last-child .filter-checkbox-label:nth-child(2) .filter-checkbox-text::after {
+    content: 'BESTSELLER';
+    background-color: #f97316;
+    color: white;
+}
+
+.filter-category:last-child .filter-checkbox-label:nth-child(3) .filter-checkbox-text::after {
+    content: 'REGULAR';
+    background-color: #6b7280;
+    color: white;
+}
+
+.filter-count {
+    background-color: #f97316;
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 10px;
+    margin-left: 6px;
+    min-width: 18px;
+    text-align: center;
+}
+
+/* Search Input */
+.search-input-container {
+    flex: 1;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 0;
+    font-size: 14px;
+    color: #374151;
+    background-color: white;
+    transition: all 0.2s ease;
+    height: 48px;
+    box-sizing: border-box;
+}
+
+.search-input:focus {
+    outline: none;
+    background-color: #f9fafb;
+}
+
+.search-input::placeholder {
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+/* Results Count */
+.results-count {
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: #9ca3af;
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+/* No Results */
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    color: #6b7280;
+}
+
+.no-results p {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Packages by Province */
+.packages-by-province {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.province-section {
+    margin-bottom: 40px;
+}
+
+.province-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.province-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 8px 0;
+    position: relative;
+}
+
+.province-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #f97316;
+    margin: 12px auto;
+    border-radius: 2px;
+}
+
+.province-subtitle {
+    font-size: 1.1rem;
+    color: #6b7280;
+    margin: 0;
+    font-weight: 400;
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+/* Coming Soon Sections */
+.province-section.coming-soon {
+    opacity: 0.7;
+}
+
+.coming-soon-content {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9fafb;
+    border-radius: 12px;
+    border: 2px dashed #d1d5db;
+}
+
+.coming-soon-content p {
+    font-size: 1.1rem;
+    color: #6b7280;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 299px) {
+    .packages-content {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    
+    .packages-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .filter-search-section {
+        flex-direction: column;
+    }
+    
+    .filter-button {
+        border-right: none;
+        border-bottom: 1px solid #d1d5db;
+        border-radius: 0;
+        justify-content: space-between;
+        min-width: auto;
+    }
+    
+    .search-input {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 900px) {
+    .packages-content {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+    
+    .packages-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .filter-search-section {
+        flex-direction: row;
+    }
+    
+    .filter-button {
+        min-width: 80px;
+        padding: 10px 12px;
+        font-size: 13px;
+        border-right: 1px solid #d1d5db;
+    }
+    
+    .search-input {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+    
+    .filter-options-advanced {
+        min-width: 280px;
+    }
+}
+
+@media (min-width: 901px) {
+    .packages-content {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    
+    .packages-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .search-input {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .packages-by-province {
+        gap: 30px;
+    }
+    
+    .province-section {
+        margin-bottom: 20px;
+    }
+    
+    .province-header {
+        margin-bottom: 25px;
+    }
+    
+    .province-title {
+        font-size: 1.5rem;
+    }
+    
+    .province-subtitle {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .packages-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .province-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    .packages-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
