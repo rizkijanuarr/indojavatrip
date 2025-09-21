@@ -1,6 +1,7 @@
 import "./CardPackage.css"
 import { useTranslation } from 'react-i18next';
 import MyButton from "../MyButton/MyButton"
+import CloudinaryImage from "../CloudinaryImage"
 
 export default function CardPackage({ 
   id,
@@ -14,6 +15,7 @@ export default function CardPackage({
   badge,
   badgeKey,
   imageUrl,
+  cloudinaryName,
   rating = "5.0",
   ratingText = "All guests are satisfied",
   ratingTextKey,
@@ -47,10 +49,18 @@ export default function CardPackage({
       {badge && <div className="package-badge">{displayBadge}</div>}
       
       <div className="package-image">
-        <img 
-          src={imageUrl || `https://picsum.photos/300/200?random=${id}`} 
-          alt={displayTitle} 
-        />
+        {cloudinaryName ? (
+          <CloudinaryImage 
+            imageName={cloudinaryName} 
+            alt={displayTitle}
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          />
+        ) : (
+          <img 
+            src={imageUrl || `https://picsum.photos/300/200?random=${id}`} 
+            alt={displayTitle} 
+          />
+        )}
       </div>
       
       <div className="package-content">

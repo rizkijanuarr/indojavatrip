@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next"
 import "./PackageDetailStyleSection.css"
 import HeaderSection from "../../components/HeaderSection/HeaderSection"
 import MyButton from "../../components/MyButton/MyButton"
+import CloudinaryImage from "../../components/CloudinaryImage"
 import { packagesData } from "../../data/packages"
 
 export default function PackageDetailSection() {
@@ -141,11 +142,19 @@ export default function PackageDetailSection() {
                         <div className="package-images-section">
                             {/* Main Image */}
                             <div className="main-image-container">
-                                <img 
-                                    src={galleryImages[activeImageIndex]} 
-                                    alt={packageData.titleKey ? t(packageData.titleKey) : packageData.title}
-                                    className="main-image"
-                                />
+                                {packageData.cloudinaryName ? (
+                                    <CloudinaryImage 
+                                        imageName={packageData.cloudinaryName} 
+                                        alt={packageData.titleKey ? t(packageData.titleKey) : packageData.title}
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                    />
+                                ) : (
+                                    <img 
+                                        src={galleryImages[activeImageIndex]} 
+                                        alt={packageData.titleKey ? t(packageData.titleKey) : packageData.title}
+                                        className="main-image"
+                                    />
+                                )}
                                 {packageData.hasBadge && packageData.badge && (
                                     <div className="package-badge">
                                         {packageData.badgeKey ? t(packageData.badgeKey) : packageData.badge}

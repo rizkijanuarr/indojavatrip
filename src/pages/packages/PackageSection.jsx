@@ -299,6 +299,7 @@ export default function PackageSection() {
                                     titleKey={pkg.titleKey}
                                     description={pkg.description}
                                     descriptionKey={pkg.descriptionKey}
+                                    cloudinaryName={pkg.cloudinaryName}
                                     price={pkg.price}
                                     days={pkg.durasiHari}
                                     daysKey={pkg.durasiHariKey}

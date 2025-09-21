@@ -1,28 +1,28 @@
 export const galleryImages = [
     {
         id: 1,
-        src: "https://picsum.photos/600/500?random=1",
+        cloudinaryName: "2D1N2_q9bbia",
         alt: "Beautiful Travel Destination",
         large: true
     },
     {
         id: 2,
-        src: "https://picsum.photos/300/250?random=2",
+        cloudinaryName: "tumpaksewu5_zurkdj",
         alt: "Adventure Tour"
     },
     {
         id: 3,
-        src: "https://picsum.photos/300/250?random=3",
+        cloudinaryName: "bromo13_q2vorg",
         alt: "Cultural Experience"
     },
     {
         id: 4,
-        src: "https://picsum.photos/300/250?random=4",
+        cloudinaryName: "ijen1_frzakq",
         alt: "Nature Exploration"
     },
     {
         id: 5,
-        src: "https://picsum.photos/300/250?random=5",
+        cloudinaryName: "4D3NC_yfsxnh",
         alt: "Scenic Views"
     }
 ]

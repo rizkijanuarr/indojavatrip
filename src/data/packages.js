@@ -5,6 +5,7 @@ export const packagesData = {
                 id: 1,
                 title: "Bromo Midnight Adventure",
                 titleKey: "packages.eastJava.2d1n.bromoMidnight.title",
+                cloudinaryName: "2D1N1_xzaywm",
                 description: "Nikmati pengalaman midnight trip untuk melihat sunrise ikonik di Gunung Bromo.", // fallback
                 descriptionKey: "packages.eastJava.2d1n.bromoMidnight.description",
                 durasiHariKey: "packages.common.duration.2d1n",
@@ -52,6 +53,7 @@ export const packagesData = {
                 titleKey: "packages.eastJava.2d1n.mountBromo.title",
                 descriptionKey: "packages.eastJava.2d1n.mountBromo.description",
                 title: "Mount Bromo Experience", // fallback
+                cloudinaryName: "2D1N2_q9bbia",
                 description: "Jelajahi Gunung Bromo dengan paket singkat yang ideal untuk liburan akhir pekan.", // fallback
                 durasiHariKey: "packages.common.duration.2d1n",
                 durasiHari: "2D/1N", // fallback
@@ -103,6 +105,7 @@ export const packagesData = {
                 titleKey: "packages.eastJava.3d2n.bromoMalang.title",
                 descriptionKey: "packages.eastJava.3d2n.bromoMalang.description",
                 title: "Bromo & Malang Batu City", // fallback
+                cloudinaryName: "3D2N1_d3u3zs",
                 description: "Kombinasi sempurna antara keindahan sunrise Bromo dan wisata seru di Malang Batu City.", // fallback
                 durasiHariKey: "packages.common.duration.3d2n",
                 durasiHari: "3D/2N", // fallback
@@ -169,6 +172,7 @@ export const packagesData = {
                 titleKey: "packages.eastJava.3d2n.bromoTumpaksewu.title",
                 descriptionKey: "packages.eastJava.3d2n.bromoTumpaksewu.description",
                 title: "Bromo & Tumpaksewu", // fallback
+                cloudinaryName: "3D2N2_sfuedf",
                 description: "Petualangan eksotis dari sunrise Bromo hingga air terjun spektakuler Tumpaksewu.", // fallback
                 durasiHariKey: "packages.common.duration.3d2n",
                 durasiHari: "3D/2N", // fallback
@@ -229,6 +233,7 @@ export const packagesData = {
                 titleKey: "packages.eastJava.3d2n.bromoSurabaya.title",
                 descriptionKey: "packages.eastJava.3d2n.bromoSurabaya.description",
                 title: "Bromo & Surabaya City", // fallback
+                cloudinaryName: "3D2N3_v5d3ad",
                 description: "Nikmati keindahan Bromo dilanjut dengan eksplorasi kota Surabaya yang bersejarah.", // fallback
                 durasiHariKey: "packages.common.duration.3d2n",
                 durasiHari: "3D/2N", // fallback
@@ -286,6 +291,7 @@ export const packagesData = {
                 titleKey: "packages.eastJava.3d2n.bromoIjen.title",
                 descriptionKey: "packages.eastJava.3d2n.bromoIjen.description",
                 title: "Bromo & Ijen Crater", // fallback
+                cloudinaryName: "3D2N4_dawep2",
                 description: "Petualangan epik dua gunung berapi dengan sunrise Bromo dan blue fire Ijen yang memukau.", // fallback
                 durasiHariKey: "packages.common.duration.3d2n",
                 durasiHari: "3D/2N", // fallback
@@ -353,6 +359,7 @@ export const packagesData = {
                 titleKey: "packages.eastJava.4d3n.bromoIjenTumpaksewu.title",
                 descriptionKey: "packages.eastJava.4d3n.bromoIjenTumpaksewu.description",
                 title: "Bromo, Ijen Crater & Tumpaksewu", // fallback
+                cloudinaryName: "4D3N1_whaqzo",
                 description: "Triple adventure dengan sunrise Bromo, blue fire Ijen, dan keindahan air terjun Tumpaksewu.", // fallback
                 durasiHariKey: "packages.common.duration.4d3n",
                 durasiHari: "4D/3N", // fallback
@@ -429,6 +436,7 @@ export const packagesData = {
                 titleKey: "packages.eastJava.4d3n.bromoIjenSurabaya.title",
                 descriptionKey: "packages.eastJava.4d3n.bromoIjenSurabaya.description",
                 title: "Bromo, Ijen Crater & Surabaya", // fallback
+                cloudinaryName: "4D3N2_wxhfet",
                 description: "Kombinasi petualangan gunung berapi dengan eksplorasi kota Surabaya yang bersejarah.", // fallback
                 durasiHariKey: "packages.common.duration.4d3n",
                 durasiHari: "4D/3N", // fallback
@@ -500,6 +508,7 @@ export const packagesData = {
                 titleKey: "packages.eastJava.4d3n.bromoIjenMalang.title",
                 descriptionKey: "packages.eastJava.4d3n.bromoIjenMalang.description",
                 title: "Bromo, Ijen Crater & Malang", // fallback
+                cloudinaryName: "4D3N3_yddazk",
                 description: "Petualangan lengkap dari dua gunung berapi hingga wisata seru di Malang Batu City.", // fallback
                 durasiHariKey: "packages.common.duration.4d3n",
                 durasiHari: "4D/3N", // fallback
@@ -580,6 +589,7 @@ export const packagesData = {
                 titleKey: "packages.eastJava.4d3n.bromoMalangSurabaya.title",
                 descriptionKey: "packages.eastJava.4d3n.bromoMalangSurabaya.description",
                 title: "Bromo, Malang & Surabaya", // fallback
+                cloudinaryName: "4D3N4_qc7ast",
                 description: "Nikmati sunrise Bromo, wisata Malang Batu City, dan eksplorasi kota Surabaya.", // fallback
                 durasiHariKey: "packages.common.duration.4d3n",
                 durasiHari: "4D/3N", // fallback
@@ -652,6 +662,7 @@ export const packagesData = {
                 titleKey: "packages.eastJava.4d3n.bromoTumpaksewuMalang.title",
                 descriptionKey: "packages.eastJava.4d3n.bromoTumpaksewuMalang.description",
                 title: "Bromo, TumpakSewu & Malang", // fallback
+                cloudinaryName: "4D3N5_yeqphz",
                 description: "Petualangan seru dari sunrise Bromo, air terjun Tumpaksewu, hingga wisata Malang Batu City.", // fallback
                 durasiHariKey: "packages.common.duration.4d3n",
                 durasiHari: "4D/3N", // fallback
@@ -728,6 +739,7 @@ export const packagesData = {
                 titleKey: "packages.eastJava.5d4n.bromoIjenTumpaksewuSurabaya.title",
                 descriptionKey: "packages.eastJava.5d4n.bromoIjenTumpaksewuSurabaya.description",
                 title: "Bromo, Ijen Crater, Tumpaksewu & Surabaya", // fallback
+                cloudinaryName: "4D3N6_dy7qwv",
                 description: "Paket ultimate 5 hari dengan pengalaman lengkap sunrise Bromo, blue fire Ijen, air terjun Tumpaksewu dan kota Surabaya.", // fallback
                 durasiHariKey: "packages.common.duration.5d4n",
                 durasiHari: "5D/4N", // fallback
@@ -810,6 +822,7 @@ export const packagesData = {
                 titleKey: "packages.eastJava.5d4n.bromoIjenMalangSurabaya.title",
                 descriptionKey: "packages.eastJava.5d4n.bromoIjenMalangSurabaya.description",
                 title: "Bromo, Ijen Crater, Malang & Surabaya", // fallback
+                cloudinaryName: "4D3N1_whaqzo",
                 description: "Paket bestseller kombinasi gunung berapi, wisata Malang Batu City, dan eksplorasi kota Surabaya.", // fallback
                 durasiHariKey: "packages.common.duration.5d4n",
                 durasiHari: "5D/4N", // fallback
@@ -892,6 +905,7 @@ export const packagesData = {
                 titleKey: "packages.eastJava.5d4n.bromoIjenTumpaksewuMalang.title",
                 descriptionKey: "packages.eastJava.5d4n.bromoIjenTumpaksewuMalang.description",
                 title: "Bromo, Ijen Crater, Tumpaksewu & Malang", // fallback
+                cloudinaryName: "4D3N1_whaqzo",
                 description: "Paket premium 5 hari dengan 4 destinasi utama: sunrise Bromo, blue fire Ijen, air terjun Tumpaksewu, dan wisata Malang Batu City.", // fallback
                 durasiHariKey: "packages.common.duration.5d4n",
                 durasiHari: "5D/4N", // fallback
@@ -982,6 +996,7 @@ export const packagesData = {
                 titleKey: "packages.eastJava.5d4n.bromoTumpaksewuMalangSurabaya.title",
                 descriptionKey: "packages.eastJava.5d4n.bromoTumpaksewuMalangSurabaya.description",
                 title: "Bromo, Tumpaksewu, Malang & Surabaya", // fallback
+                cloudinaryName: "4D3N1_whaqzo",
                 description: "Penjelajahan seru dari sunrise Bromo, air terjun spektakuler Tumpaksewu, wisata Malang hingga kota Surabaya.", // fallback
                 durasiHariKey: "packages.common.duration.5d4n",
                 durasiHari: "5D/4N", // fallback
@@ -1070,6 +1085,7 @@ export const packagesData = {
                 titleKey: "packages.eastJava.6d5n.bromoIjenTumpaksewuMalangSurabaya.title",
                 descriptionKey: "packages.eastJava.6d5n.bromoIjenTumpaksewuMalangSurabaya.description",
                 title: "Bromo, Ijen Crater, Tumpaksewu, Malang & Surabaya", // fallback
+                cloudinaryName: "4D3N6_dy7qwv",
                 description: "Paket terlengkap 6 hari 5 malam dengan 5 destinasi utama: sunrise Bromo, blue fire Ijen, air terjun Tumpaksewu, wisata Malang Batu City, dan kota Surabaya.", // fallback
                 durasiHariKey: "packages.common.duration.6d5n",
                 durasiHari: "6D/5N", // fallback
@@ -1169,6 +1185,7 @@ export const packagesData = {
                 titleKey: "packages.rinjani.4d3n.rinjanClassicTrek.title",
                 descriptionKey: "packages.rinjani.4d3n.rinjanClassicTrek.description",
                 title: "Rinjani Classic Trek", // fallback
+                cloudinaryName: "4D3N6_dy7qwv",
                 description: "Pendakian klasik Gunung Rinjani dengan pemandangan danau Segara Anak yang memukau.", // fallback
                 durasiHariKey: "packages.common.duration.4d3n",
                 durasiHari: "4D/3N", // fallback
@@ -1208,6 +1225,7 @@ export const packagesData = {
                 titleKey: "packages.rinjani.5d4n.rinjaniSummitTrek.title",
                 descriptionKey: "packages.rinjani.5d4n.rinjaniSummitTrek.description",
                 title: "Rinjani Summit Trek", // fallback
+                cloudinaryName: "4D3N6_dy7qwv",
                 description: "Pendakian lengkap Gunung Rinjani hingga puncak dengan pengalaman mendaki yang tak terlupakan.", // fallback
                 durasiHariKey: "packages.common.duration.5d4n",
                 durasiHari: "5D/4N", // fallback

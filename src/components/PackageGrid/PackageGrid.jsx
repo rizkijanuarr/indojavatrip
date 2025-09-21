@@ -51,6 +51,7 @@ export default function PackageGrid({
             price={pkg.price}
             days={getTranslatedValue(pkg.durasiHariKey, pkg.durasiHari)}
             badge={pkg.hasBadge ? getTranslatedValue(pkg.badgeKey, pkg.badge) : null}
+            cloudinaryName={pkg.cloudinaryName}
             imageUrl={pkg.imageUrl}
             rating={pkg.rating}
             ratingText={getTranslatedValue(pkg.ratingTextKey, pkg.ratingText)}

@@ -59,7 +59,7 @@ export default function HeroSection() {
         <SocialIcons />
 
         <IndicatorSlider
-          totalSlides={4}
+          totalSlides={youtubeVideos.length}
           activeIndex={slideIndex}
           onDotClick={moveDot}
         />
