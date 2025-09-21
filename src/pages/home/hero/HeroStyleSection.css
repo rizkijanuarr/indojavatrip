@@ -157,6 +157,61 @@
   }
 }
 
+/* Center Content Section */
+.center-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  color: white;
+}
+
+.center-content h1 {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  line-height: 1.2;
+}
+
+.center-content .my-button {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.center-content .my-button:hover {
+  background: #000000 !important;
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+.hero-button {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: #ff6600;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  letter-spacing: 1px;
+}
+
+.hero-button:hover {
+  background: #000000;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
 /* Responsive Design */
 
 /* Mobile kecil (≤ 480px) */
@@ -202,6 +257,18 @@
     width: 2px;
     height: 2px;
   }
+
+  .center-content h1 {
+    font-size: clamp(1.2rem, 6vw, 1.8rem);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+
+  .hero-button {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+  }
 }
 
 /* Mobile sedang (481px - 767px) */
@@ -241,6 +308,18 @@
     width: 24px;
     height: 40px;
     padding-top: 6px;
+  }
+
+  .center-content h1 {
+    font-size: clamp(1.4rem, 5vw, 2.2rem);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+
+  .hero-button {
+    padding: 13px 26px;
+    font-size: 1rem;
+    letter-spacing: 0.8px;
   }
 }
 
@@ -282,6 +361,18 @@
     height: 45px;
     padding-top: 7px;
   }
+
+  .center-content h1 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .hero-button {
+    padding: 14px 28px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
 }
 
 /* Laptop standar (1024px - 1279px) */
@@ -311,6 +402,18 @@
   .scroll-indicator {
     bottom: -20px;
     transform: translateX(-50%) scale(0.95);
+  }
+
+  .center-content h1 {
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .hero-button {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
   }
 }
 
@@ -362,6 +465,18 @@
   .scroll-dot {
     width: 4px;
     height: 4px;
+  }
+
+  .center-content h1 {
+    font-size: clamp(2.2rem, 3vw, 3rem);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .hero-button {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
   }
 }
 

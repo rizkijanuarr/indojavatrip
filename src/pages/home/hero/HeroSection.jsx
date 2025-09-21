@@ -9,6 +9,7 @@ import IndicatorSlider from "../../../components/indicator-slider/IndicatorSlide
 import OverlayBackground from "../../../components/overlay-background/OverlayBackground"
 import "./HeroStyleSection.css"
 import TextEffectShadow from "../../../components/text-effect-shadow/TextEffectShadow"
+import MyButton from "../../../components/MyButton/MyButton"
 
 // Video dari Cloudinary - lebih reliable untuk production
 const cloudinaryVideos = [
@@ -26,6 +27,10 @@ export default function HeroSection() {
   // Section - Event Handlers
   const moveDot = (index) => {
     setSlideIndex(index)
+  }
+
+  const handleExploreClick = () => {
+    window.open('https://wa.me/6281390070766', '_blank')
   }
 
   return (
@@ -117,6 +122,17 @@ export default function HeroSection() {
         </TextEffectShadow>
       </div>
 
+      {/* Section - Center Text & Button */}
+      <div className="center-content">
+        <h1>
+          {t('hero.subtitle')}
+        </h1>
+        
+        <button className="hero-button" onClick={handleExploreClick}>
+          {t('package.jelajahi')}
+        </button>
+      </div>
+
       {/* Section - Controls & Navigation | Bottom Right */}
       <div className="controls-section">
         <SocialIcons />
@@ -131,18 +147,11 @@ export default function HeroSection() {
       {/* Section - Scroll Down Indicator | Bottom Center */}
       <div className="scroll-indicator">
         <div className="circular-text">
-          <span className="letter" style={{ "--i": 0 }}>S</span>
-          <span className="letter" style={{ "--i": 1 }}>C</span>
-          <span className="letter" style={{ "--i": 2 }}>R</span>
-          <span className="letter" style={{ "--i": 3 }}>O</span>
-          <span className="letter" style={{ "--i": 4 }}>L</span>
-          <span className="letter" style={{ "--i": 5 }}>L</span>
-          <span className="letter" style={{ "--i": 6 }}>•</span>
-          <span className="letter" style={{ "--i": 7 }}>D</span>
-          <span className="letter" style={{ "--i": 8 }}>O</span>
-          <span className="letter" style={{ "--i": 9 }}>W</span>
-          <span className="letter" style={{ "--i": 10 }}>N</span>
-          <span className="letter" style={{ "--i": 11 }}>•</span>
+          {t('hero.scrollDown').split('').map((char, index) => (
+            <span key={index} className="letter" style={{ "--i": index }}>
+              {char}
+            </span>
+          ))}
         </div>
         <div className="scroll-icon">
           <div className="scroll-dot"></div>
