@@ -10,8 +10,9 @@ import OverlayBackground from "../../../components/overlay-background/OverlayBac
 import "./HeroStyleSection.css"
 import TextEffectShadow from "../../../components/text-effect-shadow/TextEffectShadow"
 
-const youtubeVideos = [
-  "https://www.youtube.com/embed/EUlZ_Omb538?autoplay=1&mute=1&controls=0&loop=1&playlist=EUlZ_Omb538",
+// Video dari Cloudinary - lebih reliable untuk production
+const cloudinaryVideos = [
+  "https://res.cloudinary.com/dpoklkm4t/video/upload/v1758429933/Postcard_From_Bromo_Indonesia___Cinematic_Travel_Video_4K_offvq1.mp4",
 ]
 
 export default function HeroSection() {
@@ -19,6 +20,8 @@ export default function HeroSection() {
 
   // Section - State Management
   const [slideIndex, setSlideIndex] = useState(1)
+  const [videoError, setVideoError] = useState(false)
+  const [videoLoaded, setVideoLoaded] = useState(false)
 
   // Section - Event Handlers
   const moveDot = (index) => {
@@ -26,20 +29,80 @@ export default function HeroSection() {
   }
 
   return (
-    <div className="container-slider">
+    <div className="container-slider" style={{ 
+      position: 'relative', 
+      width: '100vw', 
+      height: '100vh', 
+      overflow: 'hidden' 
+    }}>
 
       {/* Section - Background Overlay Full */}
       <OverlayBackground opacity={0.5} />
 
-      {/* Section - Video Player Youtube */}
-      <div className="video-container">
-        <iframe
-          src={youtubeVideos[slideIndex - 1]}
-          title={`YouTube video ${slideIndex}`}
-          className="video-iframe"
-          allow="autoplay; encrypted-media"
-          allowFullScreen
-        />
+      {/* Section - Video Player Cloudinary */}
+      <div className="video-container" style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        zIndex: 1
+      }}>
+        {!videoError ? (
+          <video
+            src={cloudinaryVideos[slideIndex - 1]}
+            autoPlay
+            muted
+            loop
+            playsInline
+            onError={() => {
+              console.log('Video error occurred')
+              setVideoError(true)
+            }}
+            onLoadedData={() => {
+              console.log('Video loaded successfully')
+              setVideoLoaded(true)
+            }}
+            style={{
+              width: '100% !important',
+              height: '100% !important',
+              objectFit: 'cover',
+              display: 'block',
+              minWidth: '100%',
+              minHeight: '100%'
+            }}
+          />
+        ) : (
+          <div className="video-fallback" style={{
+            width: '100%',
+            height: '100%',
+            background: 'linear-gradient(45deg, #1a1a1a, #333)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}>
+            <div className="fallback-content" style={{
+              color: 'white',
+              textAlign: 'center'
+            }}>
+              <h3>Video Unavailable</h3>
+              <p>Unable to load video content</p>
+              <button 
+                onClick={() => setVideoError(false)}
+                style={{
+                  padding: '10px 20px',
+                  background: 'rgba(255,255,255,0.2)',
+                  border: '1px solid white',
+                  color: 'white',
+                  borderRadius: '5px',
+                  cursor: 'pointer'
+                }}
+              >
+                Retry
+              </button>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Section - Text Display |  Bottom Left */}
@@ -59,7 +122,7 @@ export default function HeroSection() {
         <SocialIcons />
 
         <IndicatorSlider
-          totalSlides={youtubeVideos.length}
+          totalSlides={cloudinaryVideos.length}
           activeIndex={slideIndex}
           onDotClick={moveDot}
         />
