@@ -6,6 +6,7 @@
     max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
+    position: relative;
 }
 
 /* Testimonial Card */
@@ -109,28 +110,28 @@
 
 /* Animation Classes */
 .slide-from-left {
-    animation: scrollLeft 15s linear infinite;
+    animation: scrollLeftContinuous 8s linear infinite;
 }
 
 .slide-from-right {
-    animation: scrollRight 15s linear infinite;
+    animation: scrollRightContinuous 8s linear infinite;
 }
 
-/* Keyframes */
-@keyframes scrollLeft {
+/* Keyframes - Seamless Loop */
+@keyframes scrollLeftContinuous {
     0% {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-1200px);
+        transform: translateX(-100%);
     }
 }
 
-@keyframes scrollRight {
+@keyframes scrollRightContinuous {
     0% {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(1200px);
+        transform: translateX(100%);
     }
 }

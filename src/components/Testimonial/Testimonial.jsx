@@ -4,11 +4,15 @@ import { testimonialData } from "../../data/testimonialData"
 
 export default function Testimonial() {
     const { t } = useTranslation();
+    
+    // Duplicate data untuk seamless loop
+    const duplicatedData = [...testimonialData, ...testimonialData];
+    
     return (
         <div className="testimonial-grid">
-            {testimonialData.map((testimonial, index) => {
+            {duplicatedData.map((testimonial, index) => {
                 // Determine which row (0-3 for 4 rows of 3 cards each)
-                const rowNumber = Math.floor(index / 3)
+                const rowNumber = Math.floor((index % testimonialData.length) / 3)
                 // Row 1 & 3 (0,2): left, Row 2 & 4 (1,3): right
                 const isLeftRow = rowNumber % 2 === 0
                 const animationClass = isLeftRow ? 'slide-from-left' : 'slide-from-right'
@@ -16,7 +20,7 @@ export default function Testimonial() {
                 
                 return (
                     <div 
-                        key={testimonial.id} 
+                        key={`${testimonial.id}-${Math.floor(index / testimonialData.length)}`} 
                         className={`testimonial-card ${animationClass}`}
                         style={{ animationDelay: `${delay}s` }}
                     >

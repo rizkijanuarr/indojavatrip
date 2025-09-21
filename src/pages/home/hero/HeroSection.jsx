@@ -13,7 +13,7 @@ import MyButton from "../../../components/MyButton/MyButton"
 
 // Video dari Cloudinary - lebih reliable untuk production
 const cloudinaryVideos = [
-  "https://res.cloudinary.com/dpoklkm4t/video/upload/v1758429933/Postcard_From_Bromo_Indonesia___Cinematic_Travel_Video_4K_offvq1.mp4",
+  "https://res.cloudinary.com/dpoklkm4t/video/upload/f_auto,q_auto,h_360/v1758429933/Postcard_From_Bromo_Indonesia___Cinematic_Travel_Video_4K_offvq1.mp4",
 ]
 
 export default function HeroSection() {
@@ -23,6 +23,7 @@ export default function HeroSection() {
   const [slideIndex, setSlideIndex] = useState(1)
   const [videoError, setVideoError] = useState(false)
   const [videoLoaded, setVideoLoaded] = useState(false)
+  const [loadStartTime, setLoadStartTime] = useState(null)
 
   // Section - Event Handlers
   const moveDot = (index) => {
@@ -60,12 +61,19 @@ export default function HeroSection() {
             muted
             loop
             playsInline
+            onLoadStart={() => {
+              const startTime = performance.now()
+              setLoadStartTime(startTime)
+              console.log('Video loading started...')
+            }}
             onError={() => {
               console.log('Video error occurred')
               setVideoError(true)
             }}
             onLoadedData={() => {
-              console.log('Video loaded successfully')
+              const endTime = performance.now()
+              const duration = endTime - loadStartTime
+              console.log(`Video loaded successfully in ${duration.toFixed(2)}ms (${(duration / 1000).toFixed(3)} seconds)`)
               setVideoLoaded(true)
             }}
             style={{
@@ -147,11 +155,18 @@ export default function HeroSection() {
       {/* Section - Scroll Down Indicator | Bottom Center */}
       <div className="scroll-indicator">
         <div className="circular-text">
-          {t('hero.scrollDown').split('').map((char, index) => (
-            <span key={index} className="letter" style={{ "--i": index }}>
-              {char}
-            </span>
-          ))}
+          <span className="letter" style={{ "--i": 0 }}>S</span>
+          <span className="letter" style={{ "--i": 1 }}>C</span>
+          <span className="letter" style={{ "--i": 2 }}>R</span>
+          <span className="letter" style={{ "--i": 3 }}>O</span>
+          <span className="letter" style={{ "--i": 4 }}>L</span>
+          <span className="letter" style={{ "--i": 5 }}>L</span>
+          <span className="letter" style={{ "--i": 6 }}>•</span>
+          <span className="letter" style={{ "--i": 7 }}>D</span>
+          <span className="letter" style={{ "--i": 8 }}>O</span>
+          <span className="letter" style={{ "--i": 9 }}>W</span>
+          <span className="letter" style={{ "--i": 10 }}>N</span>
+          <span className="letter" style={{ "--i": 11 }}>•</span>
         </div>
         <div className="scroll-icon">
           <div className="scroll-dot"></div>
