@@ -1255,5 +1255,26 @@
       "camera": "相机/手机用于拍照",
       "guide": "遵循导游指示确保安全"
     }
+  },
+  "meta": {
+    "defaultTitle": "探索爪哇岛 - 最佳旅游套餐 | IndoJavaTrip",
+    "defaultDescription": "通过我们精选的旅游套餐探索爪哇岛的美丽。体验印度尼西亚的文化、自然和冒险。",
+    "defaultKeywords": "爪哇旅游, 印尼旅游, 爪哇套餐, 婆罗浮屠, 日惹, 雅加达, 旅行社",
+    "home": {
+      "title": "首页 - 爪哇岛旅游套餐",
+      "description": "与IndoJavaTrip开始您的爪哇岛冒险之旅。浏览我们的独家旅游套餐，发现印尼的文化中心。"
+    },
+    "about": {
+      "title": "关于我们 - 爪哇岛专家",
+      "description": "了解IndoJavaTrip，您探索爪哇岛的可信赖伙伴。自2020年以来提供专业旅游服务。"
+    },
+    "packages": {
+      "title": "旅游套餐 - 爪哇岛旅游",
+      "description": "浏览我们完整的爪哇岛旅游套餐收藏。从文化旅游到冒险之旅，找到您的完美旅程。"
+    },
+    "contact": {
+      "title": "联系我们 - 规划您的爪哇之旅",
+      "description": "联系IndoJavaTrip规划您完美的爪哇岛冒险。提供专业旅游咨询。"
+    }
   }
 }

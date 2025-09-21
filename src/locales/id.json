@@ -732,14 +732,16 @@
             "Bensin",
             "Tol",
             "Parkir",
-            "Tiket Masuk Bromo",
-            "Jeep 4x4 Bromo",
-            "Tiket Masuk Kawah Ijen",
+            "Tiket masuk Bromo",
+            "Tiket masuk Malang Batu city",
+            "Tiket masuk Kawah Ijen",
             "Tiket masuk Tumpaksewu",
             "1 Malam Hotel di Bromo & Sarapan",
             "1 Malam Hotel di Malang & Sarapan",
             "1 Malam Cottages di Tumpaksewu & Sarapan",
             "1 Malam Hotel di Surabaya & Sarapan",
+            "1 Malam Hotel di Ijen & Sarapan",
+            "Jeep 4x4 Bromo",
             "Masker di Ijen",
             "Guide Kawah Ijen",
             "Guide Tumpaksewu",
@@ -1243,6 +1245,27 @@
       "protection": "BAWA PERLINDUNGAN MATAHARI DAN AIR",
       "camera": "KAMERA/PONSEL UNTUK FOTOGRAFI",
       "guide": "IKUTI INSTRUKSI PEMANDU UNTUK KESELAMATAN"
+    }
+  },
+  "meta": {
+    "defaultTitle": "Jelajahi Pulau Jawa - Paket Wisata Terbaik | IndoJavaTrip",
+    "defaultDescription": "Temukan keindahan Pulau Jawa dengan paket wisata pilihan kami. Rasakan budaya, alam, dan petualangan di Indonesia.",
+    "defaultKeywords": "wisata jawa, pariwisata indonesia, paket jawa, borobudur, yogyakarta, jakarta, agen travel",
+    "home": {
+      "title": "Beranda - Paket Wisata Pulau Jawa",
+      "description": "Mulai petualangan Pulau Jawa Anda dengan IndoJavaTrip. Jelajahi paket wisata eksklusif kami dan temukan jantung budaya Indonesia."
+    },
+    "about": {
+      "title": "Tentang Kami - Ahli Wisata Pulau Jawa",
+      "description": "Pelajari tentang IndoJavaTrip, mitra terpercaya Anda untuk menjelajahi Pulau Jawa. Layanan travel profesional sejak 2020."
+    },
+    "packages": {
+      "title": "Paket Wisata - Tur Pulau Jawa",
+      "description": "Jelajahi koleksi lengkap paket wisata Pulau Jawa kami. Dari tur budaya hingga perjalanan petualangan, temukan perjalanan sempurna Anda."
+    },
+    "contact": {
+      "title": "Hubungi Kami - Rencanakan Perjalanan Jawa Anda",
+      "description": "Hubungi IndoJavaTrip untuk merencanakan petualangan Pulau Jawa yang sempurna. Konsultasi travel profesional tersedia."
     }
   }
 }

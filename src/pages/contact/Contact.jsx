@@ -1,11 +1,20 @@
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 import Navbar from "../../components/navbar/Navbar";
 import ContactSection from "./ContactSection";
 import FooterSection from "../home/footer/FooterSection";
 import ScrollToTop from "../../components/ScrollToTop/ScrollToTop";
+import Meta from '../../components/Meta/Meta';
 
 export default function Contact() {
+    const { t } = useTranslation();
+
     return (
         <div className="app-root-fullscreen">
+            <Meta 
+                title={t('meta.contact.title')}
+                description={t('meta.contact.description')}
+            />
             {/* Navbar Background Area */}
             <div className="navbar-background-area" style={{ height: '120px', backgroundColor: '#000' }}></div>
             

@@ -635,7 +635,7 @@
           ]
         },
         "bromoTumpaksewuMalang": {
-          "title": "Bromo, TumpakSewu & Malang",
+          "title": "Bromo, TumpakeSewu & Malang",
           "description": "Exciting adventure from Bromo sunrise, Tumpaksewu waterfall, to Malang Batu City tourism.",
           "ratingText": "132 reviews",
           "itinerary": {
@@ -1255,6 +1255,27 @@
       "protection": "BRING SUN PROTECTION AND WATER",
       "camera": "CAMERA/PHONE FOR PHOTOGRAPHY",
       "guide": "FOLLOW GUIDE INSTRUCTIONS FOR SAFETY"
+    }
+  },
+  "meta": {
+    "defaultTitle": "Explore Java Island - Best Travel Packages | IndoJavaTrip",
+    "defaultDescription": "Discover the beauty of Java Island with our curated travel packages. Experience culture, nature, and adventure in Indonesia.",
+    "defaultKeywords": "java travel, indonesia tourism, java packages, borobudur, yogyakarta, jakarta, travel agency",
+    "home": {
+      "title": "Home - Java Island Travel Packages",
+      "description": "Start your Java Island adventure with IndoJavaTrip. Browse our exclusive travel packages and discover Indonesia's cultural heart."
+    },
+    "about": {
+      "title": "About Us - Java Island Experts", 
+      "description": "Learn about IndoJavaTrip, your trusted partner for exploring Java Island. Professional travel services since 2020."
+    },
+    "packages": {
+      "title": "Travel Packages - Java Island Tours",
+      "description": "Browse our complete collection of Java Island travel packages. From cultural tours to adventure trips, find your perfect journey."
+    },
+    "contact": {
+      "title": "Contact Us - Plan Your Java Trip",
+      "description": "Get in touch with IndoJavaTrip to plan your perfect Java Island adventure. Professional travel consultation available."
     }
   }
 }

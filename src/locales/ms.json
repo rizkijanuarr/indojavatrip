@@ -424,8 +424,8 @@
             "Day4": [
               "06.00 - 06.30 WIB | Panorama Kapas Biru",
               "06.30 - 07.00 WIB | Sarapan",
-              "07.00 - 09.00 WIB | Panorama Tumpaksewu (Berjalan 200 meter), Air Terjun Bawah (Berjalan turun 20 minit), Dinding Nirwana, Tasik Biru, Gua Titisan",
-              "09.00 - 09.00 WIB | Kembali ke cottages (Mendaki 30 minit)",
+              "07.00 - 09.00 WIB | Panorama Tumpaksewu (Berjalan 200 meter), Air terjun bawah (Berjalan turun kira-kira 20 minit), Dinding nirwana, Tasik biru, Gua titisan",
+              "09.00 - 09.00 WIB | Kembali ke cottages (Pendakian kira-kira 30 minit)",
               "09.00 - 12.00 WIB | Makan tengah hari dan daftar keluar",
               "12.30 - 17.30 WIB | Berlepas ke bandar Surabaya"
             ]
@@ -1243,6 +1243,27 @@
       "protection": "BAWA PERLINDUNGAN MATAHARI DAN AIR",
       "camera": "KAMERA/TELEFON UNTUK FOTOGRAFI",
       "guide": "IKUT ARAHAN PEMANDU UNTUK KESELAMATAN"
+    }
+  },
+  "meta": {
+    "defaultTitle": "Jelajahi Pulau Jawa - Pakej Pelancongan Terbaik | IndoJavaTrip",
+    "defaultDescription": "Temui keindahan Pulau Jawa dengan pakej pelancongan pilihan kami. Alami budaya, alam semula jadi, dan pengembaraan di Indonesia.",
+    "defaultKeywords": "pelancongan jawa, pelancongan indonesia, pakej jawa, borobudur, yogyakarta, jakarta, ejen pelancongan",
+    "home": {
+      "title": "Laman Utama - Pakej Pelancongan Pulau Jawa",
+      "description": "Mulakan pengembaraan Pulau Jawa anda dengan IndoJavaTrip. Layari pakej pelancongan eksklusif kami dan temui jantung budaya Indonesia."
+    },
+    "about": {
+      "title": "Tentang Kami - Pakar Pelancongan Pulau Jawa",
+      "description": "Ketahui tentang IndoJavaTrip, rakan kongsi terpercaya anda untuk menjelajahi Pulau Jawa. Perkhidmatan pelancongan profesional sejak 2020."
+    },
+    "packages": {
+      "title": "Pakej Pelancongan - Lawatan Pulau Jawa",
+      "description": "Layari koleksi lengkap pakej pelancongan Pulau Jawa kami. Dari lawatan budaya hingga perjalanan pengembaraan, temui perjalanan sempurna anda."
+    },
+    "contact": {
+      "title": "Hubungi Kami - Rancang Perjalanan Jawa Anda",
+      "description": "Hubungi IndoJavaTrip untuk merancang pengembaraan Pulau Jawa yang sempurna. Perundingan pelancongan profesional tersedia."
     }
   }
 }

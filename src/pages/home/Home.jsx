@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import Navbar from "../../components/navbar/Navbar";
 import HeroSection from "./hero/HeroSection";
 import PackageSection from "./package/PackageSection";
@@ -7,9 +8,11 @@ import GallerySection from "./gallery/GallerySection";
 import TestimonialSection from "./testimonial/TestimonialSection";
 import FooterSection from "./footer/FooterSection";
 import ScrollToTop from "../../components/ScrollToTop/ScrollToTop";
+import Meta from "../../components/Meta/Meta";
 
 export default function Home() {
     const [showGrid, setShowGrid] = useState(false);
+    const { t } = useTranslation();
 
     const toggleGrid = () => {
         setShowGrid(!showGrid);
@@ -17,6 +20,11 @@ export default function Home() {
 
     return (
         <div className="app-root-fullscreen">
+            <Meta 
+                title={t('meta.home.title')}
+                description={t('meta.home.description')}
+                type="website"
+            />
 
             <Navbar />
 
