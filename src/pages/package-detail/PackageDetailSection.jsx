@@ -14,6 +14,7 @@ export default function PackageDetailSection() {
     const [packageData, setPackageData] = useState(null)
     const [activeImageIndex, setActiveImageIndex] = useState(0)
     const [expandedDays, setExpandedDays] = useState({})
+    const [personCount, setPersonCount] = useState(1)
 
     const toggleDay = (dayIndex) => {
         setExpandedDays(prev => ({
@@ -110,17 +111,28 @@ export default function PackageDetailSection() {
         `https://picsum.photos/800/500?random=${packageData.id + 3}`
     ];
 
-    const handleBookNow = () => {
-        // Get translated title
-        const title = packageData.titleKey ? t(packageData.titleKey) : packageData.title;
-        // Redirect to WhatsApp with package info
-        const message = encodeURIComponent(`Hi! I'm interested in booking the package: ${title}`);
-        const whatsappUrl = `https://wa.me/6281390070766?text=${message}`;
-        window.open(whatsappUrl, '_blank');
-    };
+    const handleExploreClick = () => {
+        window.open('https://wa.me/6281390070766', '_blank')
+    }
 
+    const handlePersonCountChange = (e) => {
+        const value = parseInt(e.target.value) || 1;
+        setPersonCount(Math.max(1, value)); // Minimum 1 person
+    }
+
+    const calculateTotalPrice = () => {
+        const priceNumber = parseInt(packageData.price.replace(/[^\d]/g, '')) || 0;
+        return (priceNumber * personCount).toLocaleString('id-ID');
+    }
+    
     const handleBackToPackages = () => {
         navigate('/packages');
+    };
+
+    const handleBookNow = () => {
+        const message = `Hi, saya tertarik dengan paket ${packageData.titleKey ? t(packageData.titleKey) : packageData.title} untuk ${personCount} orang. Total harga: Rp ${calculateTotalPrice()}. Bisa bantu info lebih lanjut?`;
+        const whatsappUrl = `https://wa.me/6281390070766?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
     };
 
     return (
@@ -339,9 +351,26 @@ export default function PackageDetailSection() {
                             {/* Booking Section */}
                             <div className="booking-section">
                                 <div className="price-summary">
-                                    <span className="total-label">{t('packageDetail.totalPrice')}:</span>
+                                    <span className="total-label">{t('packageDetail.price')}:</span>
                                     <span className="total-price">{packageData.price} / {t('packageDetail.person')}</span>
                                 </div>
+                                
+                                <div className="person-selector">
+                                    <label className="person-label">{t('packageDetail.person')}:</label>
+                                    <input 
+                                        type="number" 
+                                        min="1" 
+                                        value={personCount}
+                                        onChange={handlePersonCountChange}
+                                        className="person-input"
+                                    />
+                                </div>
+
+                                <div className="total-calculation">
+                                    <span className="total-label">{t('packageDetail.totalPrice')}:</span>
+                                    <span className="total-price">Rp {calculateTotalPrice()}</span>
+                                </div>
+                                
                                 <MyButton 
                                     variant="primary" 
                                     color="#ff6600"

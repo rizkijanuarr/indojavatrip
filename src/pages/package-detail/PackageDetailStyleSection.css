@@ -502,6 +502,50 @@
     border-bottom: 1px solid #e5e7eb;
 }
 
+.person-selector {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.person-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.person-input {
+    width: 80px;
+    padding: 8px 12px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    background-color: white;
+    transition: all 0.2s ease;
+}
+
+.person-input:focus {
+    outline: none;
+    border-color: #f97316;
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+}
+
+.total-calculation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 2px solid #f97316;
+}
+
 .total-label {
     font-size: 1.1rem;
     font-weight: 600;
