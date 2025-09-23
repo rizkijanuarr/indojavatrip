@@ -25,7 +25,7 @@
     "price": "Price",
     "duration": "Duration",
     "rating": "Rating",
-    "person": "person"
+    "person": "Start from"
   },
   "tour": {
     "title": "Tour Packages",
@@ -1231,7 +1231,7 @@
     "backButton": "Back to Packages",
     "duration": "Duration",
     "price": "Price",
-    "person": "person",
+    "person": "Start from",
     "highlights": "Package Highlights",
     "itinerary": "Itinerary",
     "day": "DAY",

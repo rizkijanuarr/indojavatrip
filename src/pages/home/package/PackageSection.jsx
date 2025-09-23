@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 export default function PackageSection() {
     const { t } = useTranslation();
     
-    // Get all packages and filter only those with "NEW" badge
+    // Get all packages and filter only those with "BESTSELLER" badge
     const getAllPackages = () => {
         const allPackages = [];
 
@@ -34,9 +34,9 @@ export default function PackageSection() {
         return allPackages;
     };
 
-    // Filter packages to only show those with "NEW" badge
-    const newPackages = getAllPackages().filter(pkg => 
-        pkg.hasBadge && pkg.badge === "NEW"
+    // Filter packages to only show those with "BESTSELLER" badge and hasBadge true
+    const bestsellerPackages = getAllPackages().filter(pkg => 
+        pkg.hasBadge === true && pkg.badge === "BESTSELLER"
     ).slice(0, 6); // Limit to 6 packages
 
     // Import useNavigate from react-router-dom
@@ -51,7 +51,7 @@ export default function PackageSection() {
 
             <div className="container">
                 <PackageGrid
-                    packages={newPackages}
+                    packages={bestsellerPackages}
                     columns={3}
                     onCardClick={(packageData) => {
                         // Navigate to package detail page

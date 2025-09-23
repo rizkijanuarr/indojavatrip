@@ -74,8 +74,12 @@ export default function CardPackage({
         
         <div className="package-info">
           <div className="package-pricing">
-            <span className="package-price">{price}</span>
-            <span className="package-per">/ {t('package.person')}</span>
+            <div className="pricing-content">
+              {/* START FROM / MULAI DARI */}
+              <span className="package-per">{t('package.person')} </span> 
+              {/* HARGA */}
+              <span className="package-price">{price}</span>
+            </div>
           </div>
           {days && (
             <div className="package-days">

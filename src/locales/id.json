@@ -25,7 +25,7 @@
     "price": "Harga",
     "duration": "Durasi",
     "rating": "Rating",
-    "person": "orang"
+    "person": "Mulai dari"
   },
   "tour": {
     "title": "Paket Tour",
@@ -1221,7 +1221,7 @@
     "backButton": "Kembali ke Paket",
     "duration": "Durasi",
     "price": "Harga",
-    "person": "orang",
+    "person": "Mulai dari",
     "highlights": "Sorotan Paket",
     "itinerary": "Itinerary",
     "day": "HARI",

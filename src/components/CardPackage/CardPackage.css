@@ -121,8 +121,10 @@
 .package-info {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 20px;
+    margin-top: 20px;
+    gap: 16px;
 }
 
 /* Package Pricing */
@@ -130,16 +132,25 @@
     flex: 1;
 }
 
-.package-price {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #ff8c00;
+.pricing-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .package-per {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     color: #666;
-    margin-left: 4px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.package-price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ff6600;
+    line-height: 1.2;
 }
 
 /* Package Days */

@@ -11,7 +11,7 @@ export const packagesData = {
                 durasiHariKey: "packages.common.duration.2d1n",
                 durasiHari: "2D/1N", // fallback
                 price: "Rp 850.000",
-                hasBadge: true,
+                hasBadge: false,
                 badgeKey: "packages.common.badges.bestseller",
                 badge: "BESTSELLER", // fallback
                 rating: "4.8",
@@ -111,9 +111,9 @@ export const packagesData = {
                 durasiHari: "3D/2N", // fallback
                 price: "Rp 1.200.000",
                 hasBadge: true,
-                badgeKey: "packages.common.badges.new",
-                badge: "NEW", // fallback
-                rating: "4.9",
+                badgeKey: "packages.common.badges.bestseller",
+                badge: "BESTSELLER", // fallback
+                rating: "5.0",
                 ratingTextKey: "packages.eastJava.3d2n.bromoMalang.ratingText",
                 ratingText: "156 reviews", // fallback
                 itineraryKey: "packages.eastJava.3d2n.bromoMalang.itinerary",
@@ -177,8 +177,10 @@ export const packagesData = {
                 durasiHariKey: "packages.common.duration.3d2n",
                 durasiHari: "3D/2N", // fallback
                 price: "Rp 1.350.000",
-                hasBadge: false,
-                rating: "4.8",
+                hasBadge: true,
+                badgeKey: "packages.common.badges.bestseller",
+                badge: "BESTSELLER", // fallback
+                rating: "5.0",
                 ratingTextKey: "packages.eastJava.3d2n.bromoTumpaksewu.ratingText",
                 ratingText: "89 reviews", // fallback
                 itineraryKey: "packages.eastJava.3d2n.bromoTumpaksewu.itinerary",
@@ -296,7 +298,7 @@ export const packagesData = {
                 durasiHariKey: "packages.common.duration.3d2n",
                 durasiHari: "3D/2N", // fallback
                 price: "Rp 1.500.000",
-                hasBadge: true,
+                hasBadge: false,
                 badgeKey: "packages.common.badges.bestseller",
                 badge: "BESTSELLER", // fallback
                 rating: "4.9",
@@ -365,9 +367,9 @@ export const packagesData = {
                 durasiHari: "4D/3N", // fallback
                 price: "Rp 1.850.000",
                 hasBadge: true,
-                badgeKey: "packages.common.badges.new",
-                badge: "NEW", // fallback
-                rating: "4.9",
+                badgeKey: "packages.common.badges.bestseller",
+                badge: "BESTSELLER", // fallback
+                rating: "5.0",
                 ratingTextKey: "packages.eastJava.4d3n.bromoIjenTumpaksewu.ratingText",
                 ratingTextKey: "packages.eastJava.5d4n.bromoIjenMalangSurabaya.ratingText",
                 ratingText: "187 reviews", // fallback // fallback
@@ -827,7 +829,7 @@ export const packagesData = {
                 durasiHariKey: "packages.common.duration.5d4n",
                 durasiHari: "5D/4N", // fallback
                 price: "Rp 2.100.000",
-                hasBadge: true,
+                hasBadge: false,
                 badgeKey: "packages.common.badges.bestseller",
                 badge: "BESTSELLER", // fallback
                 rating: "4.8",
@@ -1090,7 +1092,7 @@ export const packagesData = {
                 durasiHariKey: "packages.common.duration.6d5n",
                 durasiHari: "6D/5N", // fallback
                 price: "Rp 2.650.000",
-                hasBadge: true,
+                hasBadge: false,
                 badgeKey: "packages.common.badges.bestseller",
                 badge: "BESTSELLER", // fallback
                 rating: "5.0",

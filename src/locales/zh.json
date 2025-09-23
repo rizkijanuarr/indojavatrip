@@ -25,7 +25,7 @@
     "price": "价格",
     "duration": "持续时间",
     "rating": "评级",
-    "person": "人"
+    "person": "开始于"
   },
   "tour": {
     "title": "旅游套餐",
@@ -1230,7 +1230,7 @@
     "backButton": "返回套餐",
     "duration": "时长",
     "price": "价格",
-    "person": "人",
+    "person": "开始于",
     "highlights": "套餐亮点",
     "itinerary": "行程安排",
     "day": "第",

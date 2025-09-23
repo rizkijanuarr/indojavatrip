@@ -130,7 +130,7 @@ export default function PackageDetailSection() {
     };
 
     const handleBookNow = () => {
-        const message = `Hi, saya tertarik dengan paket ${packageData.titleKey ? t(packageData.titleKey) : packageData.title} untuk ${personCount} orang. Total harga: Rp ${calculateTotalPrice()}. Bisa bantu info lebih lanjut?`;
+        const message = `Hi, saya tertarik dengan paket ${packageData.titleKey ? t(packageData.titleKey) : packageData.title}, bisa info lebih lanjut Kak ?`;
         const whatsappUrl = `https://wa.me/6281390070766?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank');
     };
@@ -215,8 +215,8 @@ export default function PackageDetailSection() {
                                     </span>
                                 </div>
                                 <div className="detail-item">
-                                    <span className="detail-label">{t('packageDetail.price')}:</span>
-                                    <span className="detail-value price">{packageData.price} / {t('packageDetail.person')}</span>
+                                    <span className="detail-label">{t('packageDetail.person')} :</span>
+                                    <span className="detail-value price">{packageData.price}</span>
                                 </div>
                             </div>
 
@@ -351,24 +351,8 @@ export default function PackageDetailSection() {
                             {/* Booking Section */}
                             <div className="booking-section">
                                 <div className="price-summary">
-                                    <span className="total-label">{t('packageDetail.price')}:</span>
-                                    <span className="total-price">{packageData.price} / {t('packageDetail.person')}</span>
-                                </div>
-                                
-                                <div className="person-selector">
-                                    <label className="person-label">{t('packageDetail.person')}:</label>
-                                    <input 
-                                        type="number" 
-                                        min="1" 
-                                        value={personCount}
-                                        onChange={handlePersonCountChange}
-                                        className="person-input"
-                                    />
-                                </div>
-
-                                <div className="total-calculation">
-                                    <span className="total-label">{t('packageDetail.totalPrice')}:</span>
-                                    <span className="total-price">Rp {calculateTotalPrice()}</span>
+                                    <span className="total-label">{t('packageDetail.person')} :</span>
+                                    <span className="total-price">{packageData.price}</span>
                                 </div>
                                 
                                 <MyButton 

@@ -25,7 +25,7 @@
     "price": "価格",
     "duration": "期間",
     "rating": "評価",
-    "person": "人"
+    "person": "開始日"
   },
   "tour": {
     "title": "ツアーパッケージ",
@@ -1227,7 +1227,7 @@
     "backButton": "パッケージに戻る",
     "duration": "期間",
     "price": "価格",
-    "person": "人",
+    "person": "開始日",
     "highlights": "パッケージハイライト",
     "itinerary": "旅程",
     "day": "日目",
