@@ -92,6 +92,11 @@
     .video-container-section {
         height: 200px;
     }
+
+    .play-button {
+        width: 10px;
+        height: 10px;
+    }
     
     .video-container-section video {
         height: 200px;
@@ -106,6 +111,11 @@
 @media (max-width: 480px) {
     .video-section {
         padding: 40px 0;
+    }
+
+    .play-button {
+        width: 10px;
+        height: 10px;
     }
     
     .video-container-section {
