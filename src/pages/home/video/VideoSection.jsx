@@ -13,24 +13,11 @@ export default function VideoSection() {
     const [isPlaying, setIsPlaying] = useState(false);
 
     const handlePlayClick = () => {
-        console.log('Play button clicked');
         const video = document.querySelector('.video-container-section video');
-        console.log('Video element found:', video);
         if (video) {
-            console.log('Video current state:', {
-                paused: video.paused,
-                currentTime: video.currentTime,
-                readyState: video.readyState,
-                src: video.src
-            });
             video.play().then(() => {
-                console.log('Video play successful');
                 setIsPlaying(true);
-            }).catch(error => {
-                console.error('Video play failed:', error);
             });
-        } else {
-            console.error('Video element not found');
         }
     };
 

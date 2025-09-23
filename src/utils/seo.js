@@ -60,7 +60,7 @@ export const saveSitemap = (packageData = []) => {
   const sitemapContent = generateSitemap(packageData);
   
   // In a real implementation, you'd write this to public/sitemap.xml
-  console.log('Generated sitemap:', sitemapContent);
+  
   
   return sitemapContent;
 };
