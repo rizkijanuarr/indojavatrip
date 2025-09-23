@@ -9,6 +9,7 @@ import TestimonialSection from "./testimonial/TestimonialSection";
 import FooterSection from "./footer/FooterSection";
 import ScrollToTop from "../../components/ScrollToTop/ScrollToTop";
 import Meta from "../../components/Meta/Meta";
+import VideoSection from "./video/VideoSection";
 
 export default function Home() {
     const [showGrid, setShowGrid] = useState(false);
@@ -29,6 +30,7 @@ export default function Home() {
             <Navbar />
 
             <HeroSection />
+            <VideoSection />
             <PackageSection />
             <TourPackageSection />
             <GallerySection />

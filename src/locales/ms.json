@@ -11,6 +11,11 @@
     "scrollDown": "SKROL • KE BAWAH •",
     "followUs": "Ikuti Kami"
   },
+  "video": {
+    "title": "Galeri Video",
+    "subtitle": "Saksikan video menarik tentang destinasi pelancongan kami",
+    "fallback": "Pelayar anda tidak menyokong video ini."
+  },
   "package": {
     "title": "Pakej Kami",
     "subtitle": "Temui destinasi yang tidak dapat dilupakan di Jawa Timur, Indonesia. Percayai kepakaran kami dan kualiti perkhidmatan yang tiada tandingan.",

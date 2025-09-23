@@ -11,6 +11,11 @@
     "scrollDown": "SCROLL • DOWN •",
     "followUs": "Follow Us"
   },
+  "video": {
+  "title": "Video Gallery",
+  "subtitle": "Watch exciting videos about our tourist destinations",
+  "fallback": "Your browser does not support this video."
+},
   "package": {
     "title": "Our Packages",
     "subtitle": "Discover unforgettable destinations in East Java, Indonesia. Trust our expertise and unparalleled service quality.",
