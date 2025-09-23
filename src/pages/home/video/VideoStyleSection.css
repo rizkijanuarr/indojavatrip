@@ -85,3 +85,44 @@
     height: 32px;
     margin-left: 4px;
 }
+
+/* Responsive Styles */
+/* Tablet */
+@media (max-width: 768px) {
+    .video-container-section {
+        height: 200px;
+    }
+    
+    .video-container-section video {
+        height: 200px;
+    }
+    
+    .container {
+        padding: 0 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .video-section {
+        padding: 40px 0;
+    }
+    
+    .video-container-section {
+        height: 200px;
+        border-radius: 12px;
+    }
+    
+    .video-container-section video {
+        height: 200px;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .play-button {
+        width: 60px;
+        height: 60px;
+    }
+}
