@@ -10,7 +10,7 @@ export const packagesData = {
                 descriptionKey: "packages.eastJava.2d1n.bromoMidnight.description",
                 durasiHariKey: "packages.common.duration.2d1n",
                 durasiHari: "2D/1N", // fallback
-                price: "Rp 850.000",
+                price: "Rp 750.000",
                 hasBadge: false,
                 badgeKey: "packages.common.badges.bestseller",
                 badge: "BESTSELLER", // fallback
@@ -57,7 +57,7 @@ export const packagesData = {
                 description: "Jelajahi Gunung Bromo dengan paket singkat yang ideal untuk liburan akhir pekan.", // fallback
                 durasiHariKey: "packages.common.duration.2d1n",
                 durasiHari: "2D/1N", // fallback
-                price: "Rp 900.000",
+                price: "Rp 1.200.000",
                 hasBadge: false,
                 rating: "4.7",
                 ratingTextKey: "packages.eastJava.2d1n.mountBromo.ratingText",
@@ -109,7 +109,7 @@ export const packagesData = {
                 description: "Kombinasi sempurna antara keindahan sunrise Bromo dan wisata seru di Malang Batu City.", // fallback
                 durasiHariKey: "packages.common.duration.3d2n",
                 durasiHari: "3D/2N", // fallback
-                price: "Rp 1.200.000",
+                price: "Rp 2.100.000",
                 hasBadge: true,
                 badgeKey: "packages.common.badges.bestseller",
                 badge: "BESTSELLER", // fallback
@@ -176,7 +176,7 @@ export const packagesData = {
                 description: "Petualangan eksotis dari sunrise Bromo hingga air terjun spektakuler Tumpaksewu.", // fallback
                 durasiHariKey: "packages.common.duration.3d2n",
                 durasiHari: "3D/2N", // fallback
-                price: "Rp 1.350.000",
+                price: "Rp 2.050.000",
                 hasBadge: true,
                 badgeKey: "packages.common.badges.bestseller",
                 badge: "BESTSELLER", // fallback
@@ -239,7 +239,7 @@ export const packagesData = {
                 description: "Nikmati keindahan Bromo dilanjut dengan eksplorasi kota Surabaya yang bersejarah.", // fallback
                 durasiHariKey: "packages.common.duration.3d2n",
                 durasiHari: "3D/2N", // fallback
-                price: "Rp 1.100.000",
+                price: "Rp 1.850.000",
                 hasBadge: false,
                 rating: "4.6",
                 ratingTextKey: "packages.eastJava.3d2n.bromoSurabaya.ratingText",
@@ -297,7 +297,7 @@ export const packagesData = {
                 description: "Petualangan epik dua gunung berapi dengan sunrise Bromo dan blue fire Ijen yang memukau.", // fallback
                 durasiHariKey: "packages.common.duration.3d2n",
                 durasiHari: "3D/2N", // fallback
-                price: "Rp 1.500.000",
+                price: "Rp 2.050.000",
                 hasBadge: false,
                 badgeKey: "packages.common.badges.bestseller",
                 badge: "BESTSELLER", // fallback
@@ -365,7 +365,7 @@ export const packagesData = {
                 description: "Triple adventure dengan sunrise Bromo, blue fire Ijen, dan keindahan air terjun Tumpaksewu.", // fallback
                 durasiHariKey: "packages.common.duration.4d3n",
                 durasiHari: "4D/3N", // fallback
-                price: "Rp 1.850.000",
+                price: "Rp 2.650.000",
                 hasBadge: true,
                 badgeKey: "packages.common.badges.bestseller",
                 badge: "BESTSELLER", // fallback
@@ -442,7 +442,7 @@ export const packagesData = {
                 description: "Kombinasi petualangan gunung berapi dengan eksplorasi kota Surabaya yang bersejarah.", // fallback
                 durasiHariKey: "packages.common.duration.4d3n",
                 durasiHari: "4D/3N", // fallback
-                price: "Rp 1.750.000",
+                price: "Rp 2.400.000",
                 hasBadge: true,
                 badgeKey: "packages.common.badges.explorer",
                 badge: "EXPLORER", // fallback
@@ -514,7 +514,7 @@ export const packagesData = {
                 description: "Petualangan lengkap dari dua gunung berapi hingga wisata seru di Malang Batu City.", // fallback
                 durasiHariKey: "packages.common.duration.4d3n",
                 durasiHari: "4D/3N", // fallback
-                price: "Rp 1.900.000",
+                price: "Rp 2.750.000",
                 hasBadge: true,
                 badgeKey: "packages.common.badges.premium",
                 badgeKey: "packages.common.badges.premium",
@@ -595,7 +595,7 @@ export const packagesData = {
                 description: "Nikmati sunrise Bromo, wisata Malang Batu City, dan eksplorasi kota Surabaya.", // fallback
                 durasiHariKey: "packages.common.duration.4d3n",
                 durasiHari: "4D/3N", // fallback
-                price: "Rp 1.650.000",
+                price: "Rp 2.500.000",
                 hasBadge: true,
                 badgeKey: "packages.common.badges.complete",
                 badge: "COMPLETE", // fallback
@@ -668,7 +668,7 @@ export const packagesData = {
                 description: "Petualangan seru dari sunrise Bromo, air terjun Tumpaksewu, hingga wisata Malang Batu City.", // fallback
                 durasiHariKey: "packages.common.duration.4d3n",
                 durasiHari: "4D/3N", // fallback
-                price: "Rp 1.800.000",
+                price: "Rp 2.750.000",
                 hasBadge: true,
                 badgeKey: "packages.common.badges.adventure",
                 badge: "ADVENTURE", // fallback
@@ -745,7 +745,7 @@ export const packagesData = {
                 description: "Paket ultimate 5 hari dengan pengalaman lengkap sunrise Bromo, blue fire Ijen, air terjun Tumpaksewu dan kota Surabaya.", // fallback
                 durasiHariKey: "packages.common.duration.5d4n",
                 durasiHari: "5D/4N", // fallback
-                price: "Rp 2.200.000",
+                price: "Rp 2.950.000",
                 hasBadge: true,
                 badgeKey: "packages.common.badges.new",
                 badge: "NEW", // fallback
@@ -828,7 +828,7 @@ export const packagesData = {
                 description: "Paket bestseller kombinasi gunung berapi, wisata Malang Batu City, dan eksplorasi kota Surabaya.", // fallback
                 durasiHariKey: "packages.common.duration.5d4n",
                 durasiHari: "5D/4N", // fallback
-                price: "Rp 2.100.000",
+                price: "Rp 3.100.000",
                 hasBadge: false,
                 badgeKey: "packages.common.badges.bestseller",
                 badge: "BESTSELLER", // fallback
@@ -911,7 +911,7 @@ export const packagesData = {
                 description: "Paket premium 5 hari dengan 4 destinasi utama: sunrise Bromo, blue fire Ijen, air terjun Tumpaksewu, dan wisata Malang Batu City.", // fallback
                 durasiHariKey: "packages.common.duration.5d4n",
                 durasiHari: "5D/4N", // fallback
-                price: "Rp 2.350.000",
+                price: "Rp 3.300.000",
                 hasBadge: true,
                 badgeKey: "packages.common.badges.ultimate",
                 badge: "ULTIMATE", // fallback
@@ -1002,7 +1002,7 @@ export const packagesData = {
                 description: "Penjelajahan seru dari sunrise Bromo, air terjun spektakuler Tumpaksewu, wisata Malang hingga kota Surabaya.", // fallback
                 durasiHariKey: "packages.common.duration.5d4n",
                 durasiHari: "5D/4N", // fallback
-                price: "Rp 2.250.000",
+                price: "Rp 3.100.000",
                 hasBadge: true,
                 badgeKey: "packages.common.badges.complete",
                 badge: "COMPLETE", // fallback
@@ -1091,7 +1091,7 @@ export const packagesData = {
                 description: "Paket terlengkap 6 hari 5 malam dengan 5 destinasi utama: sunrise Bromo, blue fire Ijen, air terjun Tumpaksewu, wisata Malang Batu City, dan kota Surabaya.", // fallback
                 durasiHariKey: "packages.common.duration.6d5n",
                 durasiHari: "6D/5N", // fallback
-                price: "Rp 2.650.000",
+                price: "Rp 3.600.000",
                 hasBadge: false,
                 badgeKey: "packages.common.badges.bestseller",
                 badge: "BESTSELLER", // fallback
