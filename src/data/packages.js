@@ -230,64 +230,64 @@ export const packagesData = {
                     "Madakaripura Cost"
                 ]
             },
-            {
-                id: 5,
-                titleKey: "packages.eastJava.3d2n.bromoSurabaya.title",
-                descriptionKey: "packages.eastJava.3d2n.bromoSurabaya.description",
-                title: "Bromo & Surabaya City", // fallback
-                cloudinaryName: "3D2N3_v5d3ad",
-                description: "Nikmati keindahan Bromo dilanjut dengan eksplorasi kota Surabaya yang bersejarah.", // fallback
-                durasiHariKey: "packages.common.duration.3d2n",
-                durasiHari: "3D/2N", // fallback
-                price: "Rp 1.850.000",
-                hasBadge: false,
-                rating: "4.6",
-                ratingTextKey: "packages.eastJava.3d2n.bromoSurabaya.ratingText",
-                ratingText: "72 reviews", // fallback
-                itineraryKey: "packages.eastJava.3d2n.bromoSurabaya.itinerary",
-                itinerary: {
-                    Day1: [
-                        "12.00 - 12.30 WIB | Pick up on request (Hotel, Station, Airport)",
-                        "12.30 - 16.30 WIB | Lunch & Depart to hotel area Bromo",
-                        "16.30 - 16.30 WIB | Check in hotel and rest & dinner in area Bromo"
-                    ],
-                    Day2: [
-                        "02.30 - 03.30 WIB | Pick up jeep Bromo sunrise tour",
-                        "03.30 - 04.10 WIB | Waiting at the coffee shop at the sunrise point in Bromo area",
-                        "04.10 - 08.40 WIB | Penanjakan 1 / Kingkong Hill, Widodaren Hill, Sea Sand, Whispering Sand, Bromo Crater (Can walk or ride a horse), Teletubbies Hill",
-                        "08.40 - 11.30 WIB | Return to the hotel, breakfast & check out from hotel",
-                        "12.00 - 16.30 WIB | Depart to Hotel Surabaya city",
-                        "16.30 - 16.30 WIB | Check in Hotel",
-                        "18.00 - 21.00 WIB | Sightseeing in the city of Surabaya and dinner",
-                        "21.00 - 21.00 WIB | Return to the hotel and rest"
-                    ],
-                    Day3: [
-                        "Breakfast and checkout hotel",
-                        "Depart to Surabaya Airport"
-                    ]
-                },
-                includeKey: "packages.eastJava.3d2n.bromoSurabaya.include",
-                include: [
-                    "Transport",
-                    "Driver",
-                    "Gasoline",
-                    "Toll",
-                    "Parking",
-                    "Entrance Ticket Bromo",
-                    "4x4 Bromo Jeep",
-                    "Mineral Water",
-                    "1 Night Hotel in Bromo & Breakfast",
-                    "1 Night Hotel in Surabaya & Breakfast",
-                    "Wifi portable"
-                ],
-                excludeKey: "packages.eastJava.3d2n.bromoSurabaya.exclude",
-                exclude: [
-                    "Lunch",
-                    "Dinner",
-                    "Horse in Bromo",
-                    "Madakaripura Cost"
-                ]
-            },
+            // {
+            //     id: 5,
+            //     titleKey: "packages.eastJava.3d2n.bromoSurabaya.title",
+            //     descriptionKey: "packages.eastJava.3d2n.bromoSurabaya.description",
+            //     title: "Bromo & Surabaya City", // fallback
+            //     cloudinaryName: "3D2N3_v5d3ad",
+            //     description: "Nikmati keindahan Bromo dilanjut dengan eksplorasi kota Surabaya yang bersejarah.", // fallback
+            //     durasiHariKey: "packages.common.duration.3d2n",
+            //     durasiHari: "3D/2N", // fallback
+            //     price: "Rp 1.850.000",
+            //     hasBadge: false,
+            //     rating: "4.6",
+            //     ratingTextKey: "packages.eastJava.3d2n.bromoSurabaya.ratingText",
+            //     ratingText: "72 reviews", // fallback
+            //     itineraryKey: "packages.eastJava.3d2n.bromoSurabaya.itinerary",
+            //     itinerary: {
+            //         Day1: [
+            //             "12.00 - 12.30 WIB | Pick up on request (Hotel, Station, Airport)",
+            //             "12.30 - 16.30 WIB | Lunch & Depart to hotel area Bromo",
+            //             "16.30 - 16.30 WIB | Check in hotel and rest & dinner in area Bromo"
+            //         ],
+            //         Day2: [
+            //             "02.30 - 03.30 WIB | Pick up jeep Bromo sunrise tour",
+            //             "03.30 - 04.10 WIB | Waiting at the coffee shop at the sunrise point in Bromo area",
+            //             "04.10 - 08.40 WIB | Penanjakan 1 / Kingkong Hill, Widodaren Hill, Sea Sand, Whispering Sand, Bromo Crater (Can walk or ride a horse), Teletubbies Hill",
+            //             "08.40 - 11.30 WIB | Return to the hotel, breakfast & check out from hotel",
+            //             "12.00 - 16.30 WIB | Depart to Hotel Surabaya city",
+            //             "16.30 - 16.30 WIB | Check in Hotel",
+            //             "18.00 - 21.00 WIB | Sightseeing in the city of Surabaya and dinner",
+            //             "21.00 - 21.00 WIB | Return to the hotel and rest"
+            //         ],
+            //         Day3: [
+            //             "Breakfast and checkout hotel",
+            //             "Depart to Surabaya Airport"
+            //         ]
+            //     },
+            //     includeKey: "packages.eastJava.3d2n.bromoSurabaya.include",
+            //     include: [
+            //         "Transport",
+            //         "Driver",
+            //         "Gasoline",
+            //         "Toll",
+            //         "Parking",
+            //         "Entrance Ticket Bromo",
+            //         "4x4 Bromo Jeep",
+            //         "Mineral Water",
+            //         "1 Night Hotel in Bromo & Breakfast",
+            //         "1 Night Hotel in Surabaya & Breakfast",
+            //         "Wifi portable"
+            //     ],
+            //     excludeKey: "packages.eastJava.3d2n.bromoSurabaya.exclude",
+            //     exclude: [
+            //         "Lunch",
+            //         "Dinner",
+            //         "Horse in Bromo",
+            //         "Madakaripura Cost"
+            //     ]
+            // },
             {
                 id: 6,
                 titleKey: "packages.eastJava.3d2n.bromoIjen.title",
@@ -505,87 +505,87 @@ export const packagesData = {
                     "Madakaripura Cost"
                 ]
             },
-            {
-                id: 9,
-                titleKey: "packages.eastJava.4d3n.bromoIjenMalang.title",
-                descriptionKey: "packages.eastJava.4d3n.bromoIjenMalang.description",
-                title: "Bromo, Ijen Crater & Malang", // fallback
-                cloudinaryName: "4D3N3_yddazk",
-                description: "Petualangan lengkap dari dua gunung berapi hingga wisata seru di Malang Batu City.", // fallback
-                durasiHariKey: "packages.common.duration.4d3n",
-                durasiHari: "4D/3N", // fallback
-                price: "Rp 2.750.000",
-                hasBadge: true,
-                badgeKey: "packages.common.badges.premium",
-                badgeKey: "packages.common.badges.premium",
-                badge: "PREMIUM", // fallback // fallback
-                rating: "4.9",
-                ratingTextKey: "packages.eastJava.4d3n.bromoIjenMalang.ratingText",
-                ratingText: "165 reviews", // fallback
-                itineraryKey: "packages.eastJava.4d3n.bromoIjenMalang.itinerary",
-                itinerary: {
-                    Day1: [
-                        "12.00 - 12.30 WIB | Pick up on request (Hotel, Station, Airport)",
-                        "12.30 - 16.30 WIB | Lunch & Depart to hotel area Bromo",
-                        "16.30 - 16.30 WIB | Check in hotel and rest & dinner in area Bromo"
-                    ],
-                    Day2: [
-                        "02.30 - 03.30 WIB | Pick up jeep Bromo sunrise tour",
-                        "03.30 - 04.10 WIB | Waiting at the coffee shop at the sunrise point in Bromo area",
-                        "04.10 - 08.40 WIB | Penanjakan 1 / Kingkong Hill, Widodaren Hill, Sea Sand, Whispering Sand, Bromo Crater (Can walk or ride a horse), Teletubbies Hill",
-                        "08.40 - 11.30 WIB | Return to the hotel, breakfast & check out from hotel",
-                        "12.00 - 16.30 WIB | Depart to Hotel Bondowoso city",
-                        "16.30 - 16.30 WIB | Check in Hotel, dinner, and rest"
-                    ],
-                    Day3: [
-                        "00.00 - 02.00 WIB | Depart to Ijen Paltuding Post (With take away breakfast)",
-                        "02.00 - 03.30 WIB | Start trekking to Ijen Peak (Climb in approx 1 hour and 30 minutes)",
-                        "04.00 - 04.30 WIB | Blue fire Ijen Crater (30 minutes blue flame tracking)",
-                        "04.30 - 06.45 WIB | Relax and enjoy at Ijen Peak (Climb in approx 30 minutes)",
-                        "07.00 - 07.45 WIB | Return to parking area",
-                        "08.00 - 10.00 WIB | Return to the hotel",
-                        "12.00 - 17.00 WIB | Check out hotel and depart to Hotel in Malang",
-                        "17.30 - 18.30 WIB | Check in hotel",
-                        "18.30 - 21.00 WIB | Shopping in Malang city area, dinner, Town square Batu city",
-                        "21.00 - 21.00 WIB | Return to the hotel and rest"
-                    ],
-                    Day4: [
-                        "07.00 - 08.00 WIB | Breakfast and check out hotel",
-                        "09.00 - 10.00 WIB | Apple garden",
-                        "10.30 - 12.00 WIB | Coban rondo waterfall and Maze rondo waterfall",
-                        "12.00 - 15.30 WIB | Paragliding hill, Wooden hill house, Sky park, lunch",
-                        "15.30 - 17.30 WIB | Transportation museum",
-                        "18.00 - 19.30 WIB | Dinner in Batu city",
-                        "19.30 - 21.30 WIB | Depart to Surabaya city",
-                        "21.30 - 21.30 WIB | Finish"
-                    ]
-                },
-                includeKey: "packages.eastJava.4d3n.bromoIjenMalang.include",
-                include: [
-                    "Transport",
-                    "Driver",
-                    "Gasoline",
-                    "Toll",
-                    "Parking",
-                    "Entrance Ticket Bromo",
-                    "4x4 Bromo Jeep",
-                    "Entrance Ticket Ijen Crater",
-                    "Entrance Ticket Malang / Batu city",
-                    "1 Night Hotel in Bromo & Breakfast",
-                    "1 Night Hotel in Ijen & Breakfast",
-                    "1 Night Hotel in Malang & Breakfast",
-                    "Mineral Water",
-                    "Wifi portable"
-                ],
-                excludeKey: "packages.eastJava.4d3n.bromoIjenMalang.exclude",
-                exclude: [
-                    "Lunch",
-                    "Dinner",
-                    "Horse in Bromo",
-                    "Madakaripura Cost",
-                    "Paragliding"
-                ]
-            },
+            // {
+            //     id: 9,
+            //     titleKey: "packages.eastJava.4d3n.bromoIjenMalang.title",
+            //     descriptionKey: "packages.eastJava.4d3n.bromoIjenMalang.description",
+            //     title: "Bromo, Ijen Crater & Malang", // fallback
+            //     cloudinaryName: "4D3N3_yddazk",
+            //     description: "Petualangan lengkap dari dua gunung berapi hingga wisata seru di Malang Batu City.", // fallback
+            //     durasiHariKey: "packages.common.duration.4d3n",
+            //     durasiHari: "4D/3N", // fallback
+            //     price: "Rp 2.750.000",
+            //     hasBadge: true,
+            //     badgeKey: "packages.common.badges.premium",
+            //     badgeKey: "packages.common.badges.premium",
+            //     badge: "PREMIUM", // fallback // fallback
+            //     rating: "4.9",
+            //     ratingTextKey: "packages.eastJava.4d3n.bromoIjenMalang.ratingText",
+            //     ratingText: "165 reviews", // fallback
+            //     itineraryKey: "packages.eastJava.4d3n.bromoIjenMalang.itinerary",
+            //     itinerary: {
+            //         Day1: [
+            //             "12.00 - 12.30 WIB | Pick up on request (Hotel, Station, Airport)",
+            //             "12.30 - 16.30 WIB | Lunch & Depart to hotel area Bromo",
+            //             "16.30 - 16.30 WIB | Check in hotel and rest & dinner in area Bromo"
+            //         ],
+            //         Day2: [
+            //             "02.30 - 03.30 WIB | Pick up jeep Bromo sunrise tour",
+            //             "03.30 - 04.10 WIB | Waiting at the coffee shop at the sunrise point in Bromo area",
+            //             "04.10 - 08.40 WIB | Penanjakan 1 / Kingkong Hill, Widodaren Hill, Sea Sand, Whispering Sand, Bromo Crater (Can walk or ride a horse), Teletubbies Hill",
+            //             "08.40 - 11.30 WIB | Return to the hotel, breakfast & check out from hotel",
+            //             "12.00 - 16.30 WIB | Depart to Hotel Bondowoso city",
+            //             "16.30 - 16.30 WIB | Check in Hotel, dinner, and rest"
+            //         ],
+            //         Day3: [
+            //             "00.00 - 02.00 WIB | Depart to Ijen Paltuding Post (With take away breakfast)",
+            //             "02.00 - 03.30 WIB | Start trekking to Ijen Peak (Climb in approx 1 hour and 30 minutes)",
+            //             "04.00 - 04.30 WIB | Blue fire Ijen Crater (30 minutes blue flame tracking)",
+            //             "04.30 - 06.45 WIB | Relax and enjoy at Ijen Peak (Climb in approx 30 minutes)",
+            //             "07.00 - 07.45 WIB | Return to parking area",
+            //             "08.00 - 10.00 WIB | Return to the hotel",
+            //             "12.00 - 17.00 WIB | Check out hotel and depart to Hotel in Malang",
+            //             "17.30 - 18.30 WIB | Check in hotel",
+            //             "18.30 - 21.00 WIB | Shopping in Malang city area, dinner, Town square Batu city",
+            //             "21.00 - 21.00 WIB | Return to the hotel and rest"
+            //         ],
+            //         Day4: [
+            //             "07.00 - 08.00 WIB | Breakfast and check out hotel",
+            //             "09.00 - 10.00 WIB | Apple garden",
+            //             "10.30 - 12.00 WIB | Coban rondo waterfall and Maze rondo waterfall",
+            //             "12.00 - 15.30 WIB | Paragliding hill, Wooden hill house, Sky park, lunch",
+            //             "15.30 - 17.30 WIB | Transportation museum",
+            //             "18.00 - 19.30 WIB | Dinner in Batu city",
+            //             "19.30 - 21.30 WIB | Depart to Surabaya city",
+            //             "21.30 - 21.30 WIB | Finish"
+            //         ]
+            //     },
+            //     includeKey: "packages.eastJava.4d3n.bromoIjenMalang.include",
+            //     include: [
+            //         "Transport",
+            //         "Driver",
+            //         "Gasoline",
+            //         "Toll",
+            //         "Parking",
+            //         "Entrance Ticket Bromo",
+            //         "4x4 Bromo Jeep",
+            //         "Entrance Ticket Ijen Crater",
+            //         "Entrance Ticket Malang / Batu city",
+            //         "1 Night Hotel in Bromo & Breakfast",
+            //         "1 Night Hotel in Ijen & Breakfast",
+            //         "1 Night Hotel in Malang & Breakfast",
+            //         "Mineral Water",
+            //         "Wifi portable"
+            //     ],
+            //     excludeKey: "packages.eastJava.4d3n.bromoIjenMalang.exclude",
+            //     exclude: [
+            //         "Lunch",
+            //         "Dinner",
+            //         "Horse in Bromo",
+            //         "Madakaripura Cost",
+            //         "Paragliding"
+            //     ]
+            // },
             {
                 id: 10,
                 titleKey: "packages.eastJava.4d3n.bromoMalangSurabaya.title",

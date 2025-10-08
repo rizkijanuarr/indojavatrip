@@ -55,11 +55,23 @@ export default function CardPackage({
             alt={displayTitle}
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           />
-        ) : (
+        ) : imageUrl ? (
           <img 
-            src={imageUrl || `https://picsum.photos/300/200?random=${id}`} 
+            src={imageUrl} 
             alt={displayTitle} 
           />
+        ) : (
+          <div className="no-image-placeholder" style={{ 
+            width: '100%', 
+            height: '200px', 
+            backgroundColor: '#f0f0f0', 
+            display: 'flex', 
+            alignItems: 'center', 
+            justifyContent: 'center',
+            color: '#888'
+          }}>
+            No Image Available
+          </div>
         )}
       </div>
       
