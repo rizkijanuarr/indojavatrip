@@ -6,6 +6,7 @@ import HeaderSection from "../../components/HeaderSection/HeaderSection"
 import MyButton from "../../components/MyButton/MyButton"
 import CloudinaryImage from "../../components/CloudinaryImage"
 import { packagesData } from "../../data/packages"
+import { ShimmerThumbnail } from "react-shimmer-effects"
 
 export default function PackageDetailSection() {
     const { id } = useParams()
@@ -14,7 +15,38 @@ export default function PackageDetailSection() {
     const [packageData, setPackageData] = useState(null)
     const [activeImageIndex, setActiveImageIndex] = useState(0)
     const [expandedDays, setExpandedDays] = useState({})
-    const [personCount, setPersonCount] = useState(1)
+    const [mainImageLoaded, setMainImageLoaded] = useState(false)
+    const [thumbnailsLoaded, setThumbnailsLoaded] = useState({})
+    const [imageLoadStartTime, setImageLoadStartTime] = useState(null)
+
+    // Real Cloudinary images - defined at top level
+    const galleryImages = [
+        "https://res.cloudinary.com/dpoklkm4t/image/upload/v1760449773/WTP01559_ywboqq.webp",
+        "https://res.cloudinary.com/dpoklkm4t/image/upload/v1760449766/WTP01723_csb3an.webp",
+        "https://res.cloudinary.com/dpoklkm4t/image/upload/v1760449766/2023_11_06_12_43_IMG_8141_ne5afk.webp",
+        "https://res.cloudinary.com/dpoklkm4t/image/upload/v1760449765/ADS04437_a7lqfc.webp",
+        "https://res.cloudinary.com/dpoklkm4t/image/upload/v1760449763/DSC02048_jcycfl.webp",
+        "https://res.cloudinary.com/dpoklkm4t/image/upload/v1760449763/2023_08_30_05_34_IMG_0662_hkuoej.webp",
+        "https://res.cloudinary.com/dpoklkm4t/image/upload/v1760449760/2023_08_30_06_55_IMG_2972_n3uqmg.webp",
+        "https://res.cloudinary.com/dpoklkm4t/image/upload/v1760449756/2023_08_30_05_33_IMG_3021_zek0og.webp",
+        // "https://res.cloudinary.com/dpoklkm4t/image/upload/v1760449752/2024_03_31_11_19_IMG_1351_t05vua.webp",
+        // "https://res.cloudinary.com/dpoklkm4t/image/upload/v1760449752/ADS04838_coln0r.webp",
+        // "https://res.cloudinary.com/dpoklkm4t/image/upload/v1760449748/WTP01738_em48pt.webp",
+        // "https://res.cloudinary.com/dpoklkm4t/image/upload/v1760449748/2024_03_31_11_19_IMG_1352_nmxpcj.webp",
+        // "https://res.cloudinary.com/dpoklkm4t/image/upload/v1760449745/2023_11_14_20_37_IMG_9218_joeuaj.webp",
+        // "https://res.cloudinary.com/dpoklkm4t/image/upload/v1760449743/2023_11_14_20_37_IMG_8591_mbsuq3.webp",
+        // "https://res.cloudinary.com/dpoklkm4t/image/upload/v1760449742/2024_03_25_22_39_IMG_2061_g7yhka.webp",
+        // "https://res.cloudinary.com/dpoklkm4t/image/upload/v1760449741/ADS04836_coeajc.webp",
+        // "https://res.cloudinary.com/dpoklkm4t/image/upload/v1760449741/2023_08_30_05_34_IMG_2995_fkonwg.webp",
+        // "https://res.cloudinary.com/dpoklkm4t/image/upload/v1760449740/2023_10_14_06_52_IMG_9786_qnimfw.webp",
+        // "https://res.cloudinary.com/dpoklkm4t/image/upload/v1760449739/2023_11_11_07_50_IMG_8071_nonxel.webp",
+        // "https://res.cloudinary.com/dpoklkm4t/image/upload/v1760449739/2024_08_28_05_26_IMG_0121_f4dy7r.webp",
+        // "https://res.cloudinary.com/dpoklkm4t/image/upload/v1760449737/2023_06_03_14_10_IMG_1104_s3phvy.webp",
+        // "https://res.cloudinary.com/dpoklkm4t/image/upload/v1760452615/WTP07932_f0dayc.webp",
+        // "https://res.cloudinary.com/dpoklkm4t/image/upload/v1760452607/WTP05408-2_gbarsu.webp",
+        // "https://res.cloudinary.com/dpoklkm4t/image/upload/v1760452612/WTP05178_p28tyl.webp",
+        // "https://res.cloudinary.com/dpoklkm4t/image/upload/v1760453066/WTP08214_cuywiw.webp"
+    ];
 
     const toggleDay = (dayIndex) => {
         setExpandedDays(prev => ({
@@ -22,33 +54,6 @@ export default function PackageDetailSection() {
             [dayIndex]: !prev[dayIndex]
         }))
     }
-
-    // Parallax effect for entire images section with boundary
-    useEffect(() => {
-        const handleScroll = () => {
-            const imagesSection = document.querySelector('.package-images-section')
-            const bookingSection = document.querySelector('.booking-section')
-            
-            if (imagesSection && bookingSection) {
-                const scrolled = window.pageYOffset
-                const imagesSectionTop = imagesSection.offsetTop
-                const bookingSectionTop = bookingSection.offsetTop
-                
-                // Hanya apply parallax jika scroll masih di atas booking section
-                if (scrolled < bookingSectionTop - window.innerHeight / 2) {
-                    const parallaxSpeed = 0.3
-                    const yPos = Math.max(0, scrolled * parallaxSpeed)
-                    imagesSection.style.transform = `translateY(${yPos}px)`
-                } else {
-                    // Reset transform ketika sudah sampai booking section
-                    imagesSection.style.transform = 'translateY(0px)'
-                }
-            }
-        }
-
-        window.addEventListener('scroll', handleScroll)
-        return () => window.removeEventListener('scroll', handleScroll)
-    }, [packageData])
 
     // Find package by ID
     useEffect(() => {
@@ -84,6 +89,92 @@ export default function PackageDetailSection() {
         }
     }, [id]);
 
+    // Parallax effect for entire images section with boundary
+    useEffect(() => {
+        if (!packageData) return;
+
+        const handleScroll = () => {
+            const imagesSection = document.querySelector('.package-images-section')
+            const bookingSection = document.querySelector('.booking-section')
+
+            if (imagesSection && bookingSection) {
+                const scrolled = window.pageYOffset
+                const bookingSectionTop = bookingSection.offsetTop
+
+                // Hanya apply parallax jika scroll masih di atas booking section
+                if (scrolled < bookingSectionTop - window.innerHeight / 2) {
+                    const parallaxSpeed = 0.3
+                    const yPos = Math.max(0, scrolled * parallaxSpeed)
+                    imagesSection.style.transform = `translateY(${yPos}px)`
+                } else {
+                    // Reset transform ketika sudah sampai booking section
+                    imagesSection.style.transform = 'translateY(0px)'
+                }
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [packageData])
+
+    // Log gallery images and start timing
+    useEffect(() => {
+        console.log("📷 Gallery Images loaded:", galleryImages.length, "images");
+        setImageLoadStartTime(Date.now());
+    }, []);
+
+    // Reset loading state when active image changes
+    useEffect(() => {
+        setMainImageLoaded(false);
+        setImageLoadStartTime(Date.now());
+        console.log(`🔄 Switching to image ${activeImageIndex + 1}/${galleryImages.length}`);
+    }, [activeImageIndex]);
+
+    const handleMainImageLoad = () => {
+        if (imageLoadStartTime) {
+            const loadTime = Date.now() - imageLoadStartTime;
+            console.log(`✅ Main image loaded in ${loadTime}ms (${(loadTime / 1000).toFixed(2)}s)`);
+            console.log(`📸 Image URL: ${galleryImages[activeImageIndex]}`);
+        }
+        setMainImageLoaded(true);
+    };
+
+    const handleMainImageError = () => {
+        if (imageLoadStartTime) {
+            const loadTime = Date.now() - imageLoadStartTime;
+            console.error(`❌ Failed to load main image after ${loadTime}ms`);
+            console.error(`📸 Failed URL: ${galleryImages[activeImageIndex]}`);
+        }
+        setMainImageLoaded(true);
+    };
+
+    const handleThumbnailLoad = (index) => {
+        setThumbnailsLoaded(prev => ({
+            ...prev,
+            [index]: true
+        }));
+        console.log(`✅ Thumbnail ${index + 1} loaded`);
+    };
+
+    const handleThumbnailError = (index) => {
+        console.error(`❌ Failed to load thumbnail ${index + 1}`);
+        setThumbnailsLoaded(prev => ({
+            ...prev,
+            [index]: true
+        }));
+    };
+
+    const handleBackToPackages = () => {
+        navigate('/packages');
+    };
+
+    const handleBookNow = () => {
+        if (!packageData) return;
+        const message = `Hi, saya tertarik dengan paket ${packageData.titleKey ? t(packageData.titleKey) : packageData.title}, bisa info lebih lanjut Kak ?`;
+        const whatsappUrl = `https://wa.me/6281390070766?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+    };
+
     if (!packageData) {
         return (
             <section className="package-detail-section">
@@ -102,38 +193,6 @@ export default function PackageDetailSection() {
             </section>
         );
     }
-
-    // Mock gallery images (in real app, these would come from package data)
-    const galleryImages = [
-        `https://picsum.photos/800/500?random=${packageData.id}`,
-        `https://picsum.photos/800/500?random=${packageData.id + 1}`,
-        `https://picsum.photos/800/500?random=${packageData.id + 2}`,
-        `https://picsum.photos/800/500?random=${packageData.id + 3}`
-    ];
-
-    const handleExploreClick = () => {
-        window.open('https://wa.me/6281390070766', '_blank')
-    }
-
-    const handlePersonCountChange = (e) => {
-        const value = parseInt(e.target.value) || 1;
-        setPersonCount(Math.max(1, value)); // Minimum 1 person
-    }
-
-    const calculateTotalPrice = () => {
-        const priceNumber = parseInt(packageData.price.replace(/[^\d]/g, '')) || 0;
-        return (priceNumber * personCount).toLocaleString('id-ID');
-    }
-    
-    const handleBackToPackages = () => {
-        navigate('/packages');
-    };
-
-    const handleBookNow = () => {
-        const message = `Hi, saya tertarik dengan paket ${packageData.titleKey ? t(packageData.titleKey) : packageData.title}, bisa info lebih lanjut Kak ?`;
-        const whatsappUrl = `https://wa.me/6281390070766?text=${encodeURIComponent(message)}`;
-        window.open(whatsappUrl, '_blank');
-    };
 
     return (
         <section className="package-detail-section">
@@ -154,20 +213,23 @@ export default function PackageDetailSection() {
                         <div className="package-images-section">
                             {/* Main Image */}
                             <div className="main-image-container">
-                                {packageData.cloudinaryName ? (
-                                    <CloudinaryImage 
-                                        imageName={packageData.cloudinaryName} 
-                                        alt={packageData.titleKey ? t(packageData.titleKey) : packageData.title}
-                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                                    />
-                                ) : (
-                                    <img 
-                                        src={galleryImages[activeImageIndex]} 
-                                        alt={packageData.titleKey ? t(packageData.titleKey) : packageData.title}
-                                        className="main-image"
+                                {!mainImageLoaded && (
+                                    <ShimmerThumbnail
+                                        height={500}
+                                        width="100%"
+                                        className="shimmer-main-image"
+                                        rounded
                                     />
                                 )}
-                                {packageData.hasBadge && packageData.badge && (
+                                <img
+                                    src={galleryImages[activeImageIndex]}
+                                    alt={packageData.titleKey ? t(packageData.titleKey) : packageData.title}
+                                    className="main-image"
+                                    style={{ display: mainImageLoaded ? 'block' : 'none' }}
+                                    onLoad={handleMainImageLoad}
+                                    onError={handleMainImageError}
+                                />
+                                {packageData.hasBadge && packageData.badge && mainImageLoaded && (
                                     <div className="package-badge">
                                         {packageData.badgeKey ? t(packageData.badgeKey) : packageData.badge}
                                     </div>
@@ -177,13 +239,25 @@ export default function PackageDetailSection() {
                             {/* Thumbnail Images */}
                             <div className="thumbnail-images">
                                 {galleryImages.map((image, index) => (
-                                    <img 
-                                        key={index}
-                                        src={image}
-                                        alt={`${packageData.titleKey ? t(packageData.titleKey) : packageData.title} ${index + 1}`}
-                                        className={`thumbnail ${activeImageIndex === index ? 'active' : ''}`}
-                                        onClick={() => setActiveImageIndex(index)}
-                                    />
+                                    <div key={index} className="thumbnail-wrapper">
+                                        {!thumbnailsLoaded[index] && (
+                                            <ShimmerThumbnail
+                                                height={75}
+                                                width={75}
+                                                className="shimmer-thumbnail"
+                                                rounded
+                                            />
+                                        )}
+                                        <img
+                                            src={image}
+                                            alt={`${packageData.titleKey ? t(packageData.titleKey) : packageData.title} ${index + 1}`}
+                                            className={`thumbnail ${activeImageIndex === index ? 'active' : ''}`}
+                                            style={{ display: thumbnailsLoaded[index] ? 'block' : 'none' }}
+                                            onClick={() => setActiveImageIndex(index)}
+                                            onLoad={() => handleThumbnailLoad(index)}
+                                            onError={() => handleThumbnailError(index)}
+                                        />
+                                    </div>
                                 ))}
                             </div>
                         </div>
@@ -226,7 +300,7 @@ export default function PackageDetailSection() {
                                 <div className="highlights-grid">
                                     {packageData.include && packageData.include.length > 0 ? (
                                         packageData.include.slice(0, 6).map((item, index) => {
-                                            
+
                                             // Try to get translation, fall back to original item
                                             let translatedItem = item;
                                             if (packageData.includeKey) {
@@ -261,7 +335,7 @@ export default function PackageDetailSection() {
                                     {packageData.itinerary && Object.keys(packageData.itinerary).length > 0 ? (
                                         Object.entries(packageData.itinerary).map(([day, activities], index) => (
                                             <div key={day} className="itinerary-item">
-                                                <div 
+                                                <div
                                                     className="itinerary-day"
                                                     onClick={() => toggleDay(index)}
                                                 >
@@ -273,8 +347,8 @@ export default function PackageDetailSection() {
                                                 <div className={`itinerary-content ${expandedDays[index] ? 'expanded' : ''}`}>
                                                     <div className="itinerary-activities">
                                                         {activities && activities.map((activity, actIndex) => {
-                                                            const translatedActivity = packageData.itineraryKey 
-                                                                ? t(`${packageData.itineraryKey}.${day}.${actIndex}`) 
+                                                            const translatedActivity = packageData.itineraryKey
+                                                                ? t(`${packageData.itineraryKey}.${day}.${actIndex}`)
                                                                 : activity;
                                                             return (
                                                                 <div key={actIndex} className="activity-item">
@@ -354,9 +428,9 @@ export default function PackageDetailSection() {
                                     <span className="total-label">{t('packageDetail.person')} :</span>
                                     <span className="total-price">{packageData.price}</span>
                                 </div>
-                                
-                                <MyButton 
-                                    variant="primary" 
+
+                                <MyButton
+                                    variant="primary"
                                     color="#ff6600"
                                     onClick={handleBookNow}
                                     className="book-now-button"
@@ -410,10 +484,10 @@ export default function PackageDetailSection() {
                                         <strong>{t('packageDetail.time')}:</strong> {t('packageDetail.pickupTime')}
                                     </div>
                                     <div className="meeting-item">
-                                        <strong>{t('packageDetail.contact')}:</strong> 
-                                        <a 
+                                        <strong>{t('packageDetail.contact')}:</strong>
+                                        <a
                                             href="https://wa.me/6281390070766"
-                                            target="_blank" 
+                                            target="_blank"
                                             rel="noopener noreferrer"
                                             style={{
                                                 color: '#25d366',

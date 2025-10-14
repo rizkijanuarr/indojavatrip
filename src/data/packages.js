@@ -105,7 +105,7 @@ export const packagesData = {
                 titleKey: "packages.eastJava.3d2n.bromoMalang.title",
                 descriptionKey: "packages.eastJava.3d2n.bromoMalang.description",
                 title: "Bromo & Malang Batu City", // fallback
-                cloudinaryName: "3D2N1_d3u3zs",
+                cloudinaryName: "WTP07932_f0dayc",
                 description: "Kombinasi sempurna antara keindahan sunrise Bromo dan wisata seru di Malang Batu City.", // fallback
                 durasiHariKey: "packages.common.duration.3d2n",
                 durasiHari: "3D/2N", // fallback
@@ -172,7 +172,7 @@ export const packagesData = {
                 titleKey: "packages.eastJava.3d2n.bromoTumpaksewu.title",
                 descriptionKey: "packages.eastJava.3d2n.bromoTumpaksewu.description",
                 title: "Bromo & Tumpaksewu", // fallback
-                cloudinaryName: "3D2N2_sfuedf",
+                cloudinaryName: "WTP05178_p28tyl",
                 description: "Petualangan eksotis dari sunrise Bromo hingga air terjun spektakuler Tumpaksewu.", // fallback
                 durasiHariKey: "packages.common.duration.3d2n",
                 durasiHari: "3D/2N", // fallback
@@ -230,64 +230,6 @@ export const packagesData = {
                     "Madakaripura Cost"
                 ]
             },
-            // {
-            //     id: 5,
-            //     titleKey: "packages.eastJava.3d2n.bromoSurabaya.title",
-            //     descriptionKey: "packages.eastJava.3d2n.bromoSurabaya.description",
-            //     title: "Bromo & Surabaya City", // fallback
-            //     cloudinaryName: "3D2N3_v5d3ad",
-            //     description: "Nikmati keindahan Bromo dilanjut dengan eksplorasi kota Surabaya yang bersejarah.", // fallback
-            //     durasiHariKey: "packages.common.duration.3d2n",
-            //     durasiHari: "3D/2N", // fallback
-            //     price: "Rp 1.850.000",
-            //     hasBadge: false,
-            //     rating: "4.6",
-            //     ratingTextKey: "packages.eastJava.3d2n.bromoSurabaya.ratingText",
-            //     ratingText: "72 reviews", // fallback
-            //     itineraryKey: "packages.eastJava.3d2n.bromoSurabaya.itinerary",
-            //     itinerary: {
-            //         Day1: [
-            //             "12.00 - 12.30 WIB | Pick up on request (Hotel, Station, Airport)",
-            //             "12.30 - 16.30 WIB | Lunch & Depart to hotel area Bromo",
-            //             "16.30 - 16.30 WIB | Check in hotel and rest & dinner in area Bromo"
-            //         ],
-            //         Day2: [
-            //             "02.30 - 03.30 WIB | Pick up jeep Bromo sunrise tour",
-            //             "03.30 - 04.10 WIB | Waiting at the coffee shop at the sunrise point in Bromo area",
-            //             "04.10 - 08.40 WIB | Penanjakan 1 / Kingkong Hill, Widodaren Hill, Sea Sand, Whispering Sand, Bromo Crater (Can walk or ride a horse), Teletubbies Hill",
-            //             "08.40 - 11.30 WIB | Return to the hotel, breakfast & check out from hotel",
-            //             "12.00 - 16.30 WIB | Depart to Hotel Surabaya city",
-            //             "16.30 - 16.30 WIB | Check in Hotel",
-            //             "18.00 - 21.00 WIB | Sightseeing in the city of Surabaya and dinner",
-            //             "21.00 - 21.00 WIB | Return to the hotel and rest"
-            //         ],
-            //         Day3: [
-            //             "Breakfast and checkout hotel",
-            //             "Depart to Surabaya Airport"
-            //         ]
-            //     },
-            //     includeKey: "packages.eastJava.3d2n.bromoSurabaya.include",
-            //     include: [
-            //         "Transport",
-            //         "Driver",
-            //         "Gasoline",
-            //         "Toll",
-            //         "Parking",
-            //         "Entrance Ticket Bromo",
-            //         "4x4 Bromo Jeep",
-            //         "Mineral Water",
-            //         "1 Night Hotel in Bromo & Breakfast",
-            //         "1 Night Hotel in Surabaya & Breakfast",
-            //         "Wifi portable"
-            //     ],
-            //     excludeKey: "packages.eastJava.3d2n.bromoSurabaya.exclude",
-            //     exclude: [
-            //         "Lunch",
-            //         "Dinner",
-            //         "Horse in Bromo",
-            //         "Madakaripura Cost"
-            //     ]
-            // },
             {
                 id: 6,
                 titleKey: "packages.eastJava.3d2n.bromoIjen.title",
@@ -361,7 +303,7 @@ export const packagesData = {
                 titleKey: "packages.eastJava.4d3n.bromoIjenTumpaksewu.title",
                 descriptionKey: "packages.eastJava.4d3n.bromoIjenTumpaksewu.description",
                 title: "Bromo, Ijen Crater & Tumpaksewu", // fallback
-                cloudinaryName: "4D3N1_whaqzo",
+                cloudinaryName: "WTP05408-2_gbarsu",
                 description: "Triple adventure dengan sunrise Bromo, blue fire Ijen, dan keindahan air terjun Tumpaksewu.", // fallback
                 durasiHariKey: "packages.common.duration.4d3n",
                 durasiHari: "4D/3N", // fallback
@@ -438,7 +380,7 @@ export const packagesData = {
                 titleKey: "packages.eastJava.4d3n.bromoIjenSurabaya.title",
                 descriptionKey: "packages.eastJava.4d3n.bromoIjenSurabaya.description",
                 title: "Bromo, Ijen Crater & Surabaya", // fallback
-                cloudinaryName: "4D3N2_wxhfet",
+                cloudinaryName: "ADS04838_coln0r",
                 description: "Kombinasi petualangan gunung berapi dengan eksplorasi kota Surabaya yang bersejarah.", // fallback
                 durasiHariKey: "packages.common.duration.4d3n",
                 durasiHari: "4D/3N", // fallback
@@ -505,93 +447,12 @@ export const packagesData = {
                     "Madakaripura Cost"
                 ]
             },
-            // {
-            //     id: 9,
-            //     titleKey: "packages.eastJava.4d3n.bromoIjenMalang.title",
-            //     descriptionKey: "packages.eastJava.4d3n.bromoIjenMalang.description",
-            //     title: "Bromo, Ijen Crater & Malang", // fallback
-            //     cloudinaryName: "4D3N3_yddazk",
-            //     description: "Petualangan lengkap dari dua gunung berapi hingga wisata seru di Malang Batu City.", // fallback
-            //     durasiHariKey: "packages.common.duration.4d3n",
-            //     durasiHari: "4D/3N", // fallback
-            //     price: "Rp 2.750.000",
-            //     hasBadge: true,
-            //     badgeKey: "packages.common.badges.premium",
-            //     badgeKey: "packages.common.badges.premium",
-            //     badge: "PREMIUM", // fallback // fallback
-            //     rating: "4.9",
-            //     ratingTextKey: "packages.eastJava.4d3n.bromoIjenMalang.ratingText",
-            //     ratingText: "165 reviews", // fallback
-            //     itineraryKey: "packages.eastJava.4d3n.bromoIjenMalang.itinerary",
-            //     itinerary: {
-            //         Day1: [
-            //             "12.00 - 12.30 WIB | Pick up on request (Hotel, Station, Airport)",
-            //             "12.30 - 16.30 WIB | Lunch & Depart to hotel area Bromo",
-            //             "16.30 - 16.30 WIB | Check in hotel and rest & dinner in area Bromo"
-            //         ],
-            //         Day2: [
-            //             "02.30 - 03.30 WIB | Pick up jeep Bromo sunrise tour",
-            //             "03.30 - 04.10 WIB | Waiting at the coffee shop at the sunrise point in Bromo area",
-            //             "04.10 - 08.40 WIB | Penanjakan 1 / Kingkong Hill, Widodaren Hill, Sea Sand, Whispering Sand, Bromo Crater (Can walk or ride a horse), Teletubbies Hill",
-            //             "08.40 - 11.30 WIB | Return to the hotel, breakfast & check out from hotel",
-            //             "12.00 - 16.30 WIB | Depart to Hotel Bondowoso city",
-            //             "16.30 - 16.30 WIB | Check in Hotel, dinner, and rest"
-            //         ],
-            //         Day3: [
-            //             "00.00 - 02.00 WIB | Depart to Ijen Paltuding Post (With take away breakfast)",
-            //             "02.00 - 03.30 WIB | Start trekking to Ijen Peak (Climb in approx 1 hour and 30 minutes)",
-            //             "04.00 - 04.30 WIB | Blue fire Ijen Crater (30 minutes blue flame tracking)",
-            //             "04.30 - 06.45 WIB | Relax and enjoy at Ijen Peak (Climb in approx 30 minutes)",
-            //             "07.00 - 07.45 WIB | Return to parking area",
-            //             "08.00 - 10.00 WIB | Return to the hotel",
-            //             "12.00 - 17.00 WIB | Check out hotel and depart to Hotel in Malang",
-            //             "17.30 - 18.30 WIB | Check in hotel",
-            //             "18.30 - 21.00 WIB | Shopping in Malang city area, dinner, Town square Batu city",
-            //             "21.00 - 21.00 WIB | Return to the hotel and rest"
-            //         ],
-            //         Day4: [
-            //             "07.00 - 08.00 WIB | Breakfast and check out hotel",
-            //             "09.00 - 10.00 WIB | Apple garden",
-            //             "10.30 - 12.00 WIB | Coban rondo waterfall and Maze rondo waterfall",
-            //             "12.00 - 15.30 WIB | Paragliding hill, Wooden hill house, Sky park, lunch",
-            //             "15.30 - 17.30 WIB | Transportation museum",
-            //             "18.00 - 19.30 WIB | Dinner in Batu city",
-            //             "19.30 - 21.30 WIB | Depart to Surabaya city",
-            //             "21.30 - 21.30 WIB | Finish"
-            //         ]
-            //     },
-            //     includeKey: "packages.eastJava.4d3n.bromoIjenMalang.include",
-            //     include: [
-            //         "Transport",
-            //         "Driver",
-            //         "Gasoline",
-            //         "Toll",
-            //         "Parking",
-            //         "Entrance Ticket Bromo",
-            //         "4x4 Bromo Jeep",
-            //         "Entrance Ticket Ijen Crater",
-            //         "Entrance Ticket Malang / Batu city",
-            //         "1 Night Hotel in Bromo & Breakfast",
-            //         "1 Night Hotel in Ijen & Breakfast",
-            //         "1 Night Hotel in Malang & Breakfast",
-            //         "Mineral Water",
-            //         "Wifi portable"
-            //     ],
-            //     excludeKey: "packages.eastJava.4d3n.bromoIjenMalang.exclude",
-            //     exclude: [
-            //         "Lunch",
-            //         "Dinner",
-            //         "Horse in Bromo",
-            //         "Madakaripura Cost",
-            //         "Paragliding"
-            //     ]
-            // },
             {
                 id: 10,
                 titleKey: "packages.eastJava.4d3n.bromoMalangSurabaya.title",
                 descriptionKey: "packages.eastJava.4d3n.bromoMalangSurabaya.description",
                 title: "Bromo, Malang & Surabaya", // fallback
-                cloudinaryName: "4D3N4_qc7ast",
+                cloudinaryName: "DSC02048_jcycfl",
                 description: "Nikmati sunrise Bromo, wisata Malang Batu City, dan eksplorasi kota Surabaya.", // fallback
                 durasiHariKey: "packages.common.duration.4d3n",
                 durasiHari: "4D/3N", // fallback
@@ -741,7 +602,7 @@ export const packagesData = {
                 titleKey: "packages.eastJava.5d4n.bromoIjenTumpaksewuSurabaya.title",
                 descriptionKey: "packages.eastJava.5d4n.bromoIjenTumpaksewuSurabaya.description",
                 title: "Bromo, Ijen Crater, Tumpaksewu & Surabaya", // fallback
-                cloudinaryName: "4D3N6_dy7qwv",
+                cloudinaryName: "2023_06_03_14_10_IMG_1104_s3phvy",
                 description: "Paket ultimate 5 hari dengan pengalaman lengkap sunrise Bromo, blue fire Ijen, air terjun Tumpaksewu dan kota Surabaya.", // fallback
                 durasiHariKey: "packages.common.duration.5d4n",
                 durasiHari: "5D/4N", // fallback
@@ -824,7 +685,7 @@ export const packagesData = {
                 titleKey: "packages.eastJava.5d4n.bromoIjenMalangSurabaya.title",
                 descriptionKey: "packages.eastJava.5d4n.bromoIjenMalangSurabaya.description",
                 title: "Bromo, Ijen Crater, Malang & Surabaya", // fallback
-                cloudinaryName: "4D3N1_whaqzo",
+                cloudinaryName: "2024_08_28_05_26_IMG_0121_f4dy7r",
                 description: "Paket bestseller kombinasi gunung berapi, wisata Malang Batu City, dan eksplorasi kota Surabaya.", // fallback
                 durasiHariKey: "packages.common.duration.5d4n",
                 durasiHari: "5D/4N", // fallback
@@ -907,7 +768,7 @@ export const packagesData = {
                 titleKey: "packages.eastJava.5d4n.bromoIjenTumpaksewuMalang.title",
                 descriptionKey: "packages.eastJava.5d4n.bromoIjenTumpaksewuMalang.description",
                 title: "Bromo, Ijen Crater, Tumpaksewu & Malang", // fallback
-                cloudinaryName: "4D3N1_whaqzo",
+                cloudinaryName: "ADS04836_coeajc",
                 description: "Paket premium 5 hari dengan 4 destinasi utama: sunrise Bromo, blue fire Ijen, air terjun Tumpaksewu, dan wisata Malang Batu City.", // fallback
                 durasiHariKey: "packages.common.duration.5d4n",
                 durasiHari: "5D/4N", // fallback
@@ -998,7 +859,7 @@ export const packagesData = {
                 titleKey: "packages.eastJava.5d4n.bromoTumpaksewuMalangSurabaya.title",
                 descriptionKey: "packages.eastJava.5d4n.bromoTumpaksewuMalangSurabaya.description",
                 title: "Bromo, Tumpaksewu, Malang & Surabaya", // fallback
-                cloudinaryName: "4D3N1_whaqzo",
+                cloudinaryName: "2023_10_14_06_52_IMG_9786_qnimfw",
                 description: "Penjelajahan seru dari sunrise Bromo, air terjun spektakuler Tumpaksewu, wisata Malang hingga kota Surabaya.", // fallback
                 durasiHariKey: "packages.common.duration.5d4n",
                 durasiHari: "5D/4N", // fallback
@@ -1087,7 +948,7 @@ export const packagesData = {
                 titleKey: "packages.eastJava.6d5n.bromoIjenTumpaksewuMalangSurabaya.title",
                 descriptionKey: "packages.eastJava.6d5n.bromoIjenTumpaksewuMalangSurabaya.description",
                 title: "Bromo, Ijen Crater, Tumpaksewu, Malang & Surabaya", // fallback
-                cloudinaryName: "4D3N6_dy7qwv",
+                cloudinaryName: "WTP01738_em48pt",
                 description: "Paket terlengkap 6 hari 5 malam dengan 5 destinasi utama: sunrise Bromo, blue fire Ijen, air terjun Tumpaksewu, wisata Malang Batu City, dan kota Surabaya.", // fallback
                 durasiHariKey: "packages.common.duration.6d5n",
                 durasiHari: "6D/5N", // fallback
@@ -1187,7 +1048,7 @@ export const packagesData = {
                 titleKey: "packages.rinjani.4d3n.rinjanClassicTrek.title",
                 descriptionKey: "packages.rinjani.4d3n.rinjanClassicTrek.description",
                 title: "Rinjani Classic Trek", // fallback
-                cloudinaryName: "4D3N6_dy7qwv",
+                cloudinaryName: "WTP08214_cuywiw",
                 description: "Pendakian klasik Gunung Rinjani dengan pemandangan danau Segara Anak yang memukau.", // fallback
                 durasiHariKey: "packages.common.duration.4d3n",
                 durasiHari: "4D/3N", // fallback
@@ -1227,7 +1088,7 @@ export const packagesData = {
                 titleKey: "packages.rinjani.5d4n.rinjaniSummitTrek.title",
                 descriptionKey: "packages.rinjani.5d4n.rinjaniSummitTrek.description",
                 title: "Rinjani Summit Trek", // fallback
-                cloudinaryName: "4D3N6_dy7qwv",
+                cloudinaryName: "WTP01723_csb3an",
                 description: "Pendakian lengkap Gunung Rinjani hingga puncak dengan pengalaman mendaki yang tak terlupakan.", // fallback
                 durasiHariKey: "packages.common.duration.5d4n",
                 durasiHari: "5D/4N", // fallback
